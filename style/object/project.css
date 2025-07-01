@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* 
+【Project】
+役割: 基本こればっか使います。特定のページやセクションに固有の単位を意味します、
+命名: クラス名頭に「p-」を付ける。 
+例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
+*//*# sourceMappingURL=project.css.map */

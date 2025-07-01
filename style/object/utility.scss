@@ -1,0 +1,75 @@
+/* 
+【Utility】
+役割: 単一の役割を持つ汎用性の高いスタイルを定義して、HTML側で使い回します。
+命名: HTMlのクラス名に指定して使う。 
+*/
+
+// フォント系
+.u-font-weight-bold {
+    font-weight: bold;
+}
+
+.u-font-size-10 {
+    font-size: 12px;
+}
+.u-font-size-12 {
+    font-size: 12px;
+}
+.u-font-size-14 {
+    font-size: 14px;
+}
+.u-font-size-16 {
+    font-size: 16px;
+}
+.u-font-size-18 {
+    font-size: 18px;
+}
+.u-font-size-22 {
+    font-size: 22px;
+}
+.u-font-size-24 {
+    font-size: 24px;
+}
+.u-font-size-28 {
+    font-size: 28px;
+}
+.u-font-size-32 {
+    font-size: 32px;
+}
+.u-font-size-34 {
+    font-size: 34px;
+}
+.u-font-size-36 {
+    font-size: 36px;
+}
+.u-font-size-42 {
+    font-size: 42px;
+}
+.u-font-size-46 {
+    font-size: 46px;
+}
+.u-font-size-48 {
+    font-size: 48px;
+}
+
+// テキスト系
+.u-text-center {
+    text-align: center;
+}
+.u-text-left {
+    text-align: left;
+}
+.u-text-right {
+    text-align: right;
+}
+
+// ディスプレイ系
+.u-d-block {
+    display: block;
+}
+.u-d-inline {
+    display: inline;
+}
+.u-d-inline-block {
+    display: inline-block;
+}

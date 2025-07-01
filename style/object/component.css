@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* 
+【Component】
+役割: 再利用可能な最小単位の部品（ボタン、カード、フォーム部品など）。FLOCSSとBEMを組み合わせる際に、最もBEM命名規則が活用される層です。
+命名: クラス名頭に「c-」を付ける。 
+例: .c-button, .c-button__icon, .c-card, .c-card__title
+*//*# sourceMappingURL=component.css.map */
