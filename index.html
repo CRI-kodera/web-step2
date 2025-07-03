@@ -26,17 +26,11 @@
         （※ちなみに親要素の名前を絶対引き継がないといけない訳ではない！）
     -->
     <section class="p-top">
-        <h1 class="p-top__title">BEM/FLOCSSについて</h1>
-        <p class="p-top__subtitle">これはヒントコードです</p>
-    </section>
-
-    <section class="p-abc">
-
-        <!-- 子要素から別名に変えてOK -->
-        <div class="p-xxx">
-            <p class="p-xxx__description"></p>
-            <img class="p-xxx__image" src="" alt="">
+        <div class="p-title">
+            <img class="p-title__image" src="#" alt="logo">
+            <h1 class="p-title__text u-font-size-42">タイトル</h1>
         </div>
+        <p class="p-subtitle">サブタイトル</p>
     </section>
 
     <!-- 明らかに使いまわせる要素などはコンポーネント扱い「c-xxx」と命名します -->
@@ -44,6 +38,8 @@
     <a href="#" class="c-link">リンク</a>
 
 
+
+    
 
 </body>
 </html>
