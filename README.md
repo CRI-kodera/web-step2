@@ -16,14 +16,14 @@ BEM（Block, Element, Modifier）の概念をベースに、FLOCSSのレイヤ�
 BEMでは構造を浅く保つことがルールです。
 HTMLの階層が深くても、クラス名で階層を表現してはいけません。
 
-・NG： .c-card__list__item （孫要素になっている）
-・OK: .c-card__item （常にBlock直下の要素として扱う）
+❌：.c-card__list__item （孫要素になっている）
+⭕️：.c-card__item （常にBlock直下の要素として扱う）
 
 **② 意味（役割）で命名する**
 「赤色」「右側」といった見た目（デザイン）ではなく、その要素の「役割」で命名します。
 
-・NG: .c-button--red
-・OK: .c-button--danger
+❌NG：.c-button--red
+⭕️OK：.c-button--danger
 
 **③ 命名の粒度に迷ったら**
 「その要素が他の場所でも形を変えずに使えるか？」を基準にします。
@@ -47,8 +47,10 @@ HTMLの階層が深くても、クラス名で階層を表現してはいけま�
     </li>
   </ul>
 </section>
+```
 
-> CSS(Sass)
+> CSS
+```scss
 .c-button {
   display: inline-block;
   padding: 10px 20px;
@@ -66,5 +68,6 @@ HTMLの階層が深くても、クラス名で階層を表現してはいけま�
     opacity: 0.8;
   }
 }
+```
 
 
