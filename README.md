@@ -31,6 +31,7 @@ HTMLの階層が深くても、クラス名で階層を表現してはいけま�
 
 ### 具体例
 
+```html
 <section class="p-news-section">
   <h2 class="p-news-section__title">お知らせ</h2>
   
