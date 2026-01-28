@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="愛和グループでは公的職業訓練を行っています">
+    <meta name="keywords" content="愛和グループ,職業訓練,お問い合わせ">
+    <title>contact｜Aiwa Academy</title>
+    <link rel="shortcut icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/contact.js"></script>
+</head>
+
+<body class="contact_body">
+    <header>
+        <div class="hamburger-menu">
+            <div class="ham_box"></div>
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn">
+                <span></span>  
+            </label>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="index.html">top</a></li>
+                    <li><a href="main/web_creator/team_site/web.html">web class</a></li>
+                    <li><a href="main/movie_creator/team_site/movie.html">movie class</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="form_nav">
+            <ul class="nav_right">
+                <li><a href="index.html">top</a></li>
+                <li><a href="main/web_creator/team_site/web.html">web class</a></li>
+                <li><a href="main/movie_creator/team_site/movie.html">movie class</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact">
+        <div>
+            <h1>Contact</h1>
+        </div>
+        <p class="form_contact"> お問い合わせ </p>
+        <p class="form_tag"> 《 下記項目を全てご入力ください 》 </p>
+        <section class="form">
+            <form action="contact_result.html" id="contactForm">
+                <table class="form_table">
+                    <tr>
+                        <th><label for="name">お名前</label></th>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="name-kana">フリガナ</label></th>
+                        <td><input type="text" name="name-kana" id="name-kana"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">メールアドレス</label></th>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="category">お問い合わせ項目</label>
+                        </th>
+                        <td><select name="category" class="form_category" id="category">
+                                <option value=""> 選択してください </option>
+                                <option value="職業訓練申込み"> 職業訓練の申込みについて</option>
+                                <option value="職業訓練内容"> 職業訓練内容について </option>
+                                <option value="職業訓練期間"> 職業訓練期間について </option>
+                                <option value="職業訓練(Webクリエイターコース)"> Webクリエイターコースについて </option>
+                                <option value="職業訓練(動画クリエイターコース)"> 動画クリエイターコースについて </option>
+                                <option value="その他"> その他 </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="form_line">
+                        <th class="toi"><label for="comment">お問い合わせ内容</label></th>
+                        <td><textarea name="comment" class="comment" id="comment" cols="40" rows="10"></textarea></td>
+                    </tr>
+                </table>
+                <div class="form_checkbox">
+                    <p class="PrivacyPolicy"> プライバシーポリシー <br>
+                        <br> 愛和学園（以下「本校」）は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。 <br>
+                        <br> 1.個人情報の管理 本校は、個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。 <br>
+                        <br> 2.個人情報の利用目的 お預かりした個人情報は、本校からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。 <br>
+                        <br> 3.個人情報の第三者への開示・提供の禁止 本校は、お預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。 <br>
+                        <br> 4.同意がある場合 希望されるサービスを行なうために本校が業務を委託する業者に対して開示する場合 法令に基づき開示することが必要である場合 <br>
+                        <br> 5.個人情報の安全対策 本校は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。 <br>
+                        <br> 6.ご本人の照会 ご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。 <br>
+                        <br> 7.法令、規範の遵守と見直し 本校は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。 <span class="close-button" onclick="closePrivacyPolicy()">閉じる</span>
+                    </p>
+                    <!-- チェックボックスは非表示で新たにcssでチェックボックスを作成 -->
+                    <p class="consent">
+                        <input type="checkbox" id="consent">
+                        <label for="consent"><u>プライバシーポリシーに同意します</u></label>
+                    </p>
+                </div>
+                <div class="form_bottons">
+                    <input type="submit" name="submitConfirm" value="送   信" class="button form-btn" />
+                </div>
+            </form>
+        </section>
+        <script>
+        </script>
+    </main>
+    <footer class="form_footer">
+        <div>
+            <p class="form_copyright">&copy; Aiwa Academy</p>
+        </div>
+    </footer>
+</body>
+
+</html>
