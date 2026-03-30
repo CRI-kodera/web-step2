@@ -1,0 +1,633 @@
+/*------------------------------- 全ページ共通部分 -------------------------------*/
+body {
+  background-color: #1a1a1a;
+  font-family: Shippori Mincho;
+  color: #eaeaea;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3em;
+}
+
+
+/* ------------------ web page ------------------ */
+/* nav */
+.nav_right li {
+  display: inline;
+  padding: 0 10px;
+  border-right: #ddd 1px solid;
+  color: #eaeaea;
+
+}
+
+.nav_right li:last-child {
+  border-right: none;
+}
+
+ul.nav_right {
+  text-align: right;
+  padding: 30px 30px 0 0;
+  margin: 0;
+}
+
+
+
+.web_creator_course {
+  text-align: center;
+}
+
+
+/* === slider === */
+.slider {
+  position: relative;
+}
+
+
+.slider img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin-top: 0.5%;
+}
+
+.front-image {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.back-image {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+
+
+
+/* time-schedule */
+
+h1.web_schedule_title {
+  text-align: center;
+}
+
+.web_time-schedule {
+  max-width: 400px;
+  word-break: keep-all;
+  list-style: none;
+  margin: 10% auto 0 50%;
+  padding-left: 19px;
+  border-left: 2px solid #ffffff;
+  /*真ん中の線*/
+  box-sizing: border-box;
+}
+
+.web_time-schedule li {
+  width: 100%;
+  margin: 0 0;
+  padding: 5px 0;
+  position: relative;
+}
+
+.web_time-schedule span.web_time {
+  width: 5em;
+  display: inline-block;
+  margin-left: -8em;
+  padding: 0 0 5px;
+  margin-top: 15px;
+  vertical-align: top;
+  position: relative;
+  text-align: right;
+
+}
+
+.web_time-schedule span.web_time::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: 0;
+  background: #ffffff;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+}
+
+.web_time-schedule .web_sch_box {
+  display: inline-block;
+  width: 100%;
+  margin-left: 30px;
+  padding: 15px 10px 15px 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.web_time-schedule .web_sch_title {
+  font-size: 16px;
+
+}
+
+.web_time-schedule .web_sch_tx {
+  font-size: 14px;
+
+}
+
+
+/*囲み*/
+.web_schedule {
+  position: relative;
+  border: solid 1px;
+  border-radius: 30px;
+  padding: 5%;
+  margin: 5% 20%;
+}
+
+/*スケジュール画像*/
+
+.web_sch_pic1 {
+  position: absolute;
+  width: 20%;
+  top: 5%;
+  left: -13%;
+}
+
+.web_sch_pic2 {
+  position: absolute;
+  width: 18%;
+  top: 15%;
+  right: -10%;
+}
+
+.web_sch_pic3 {
+  position: absolute;
+  width: 15%;
+  top: 80%;
+  left: -5%
+}
+
+/* .web_sch_pic img {
+  width: 20%;
+} */
+
+
+/*lecture content*/
+.web_curriculum {
+  display: none;
+}
+
+.web_gozira {
+  position: relative;
+}
+
+.web_gozira_1 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  opacity: 0.3;
+  white-space: nowrap;
+  color: #c1c1c1;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  margin-right: 1.2rem;
+  left: 0;
+}
+
+.web_gozira_2 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  opacity: 0.3;
+  white-space: nowrap;
+  color: #c1c1c1;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  margin-left: 1.2rem;
+  right: 0;
+}
+
+.web_gozira_2 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  opacity: 0.3;
+  white-space: nowrap;
+  color: #c1c1c1;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  margin-right: 1.2rem;
+  right: 0;
+  bottom: -42rem;
+}
+
+.web_lec_num {
+  text-align: center;
+}
+
+.web_lec_text_right {
+  text-align: right;
+  margin-left: auto;
+
+
+
+
+}
+
+.web_lec_text_right span {
+  display: inline-block;
+  text-align: left;
+}
+
+/*レクチャーコンテンツ（右）*/
+
+.web_lec_content_r {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.web_lec_content_r>div {
+  width: 50%;
+}
+
+.web_lecture {
+  margin-left: -19px;
+  width: 80%;
+
+}
+
+.web_lecture>li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 5rem;
+}
+
+.web_lecture>li:not(:last-child) {
+  padding-bottom: 4rem;
+}
+
+.web_lecture>li .icon1 {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 100vh;
+  display: inline-block;
+  position: absolute;
+  left: -0.5em;
+  font-size: 40px;
+}
+
+.web_lecture> ::before {
+  content: '';
+  background: #c3c3c3;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: calc(50% - -30px);
+  left: 19px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+
+
+
+/*--------左---------*/
+.web_lec_content_l {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 4rem;
+
+}
+
+.web_lec_content_l>div {
+  width: 50%;
+}
+
+.web_lec_l {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.web_lecture_l {
+  margin-right: -19px;
+  width: 80%;
+}
+
+
+.web_lecture_l>li {
+  list-style-type: none;
+  position: relative;
+  padding-right: 5rem;
+}
+
+.web_lecture_l>li:not(:last-child) {
+  padding-bottom: 4rem;
+}
+
+.web_lecture_l>li .icon1 {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 100vh;
+  display: inline-block;
+  position: absolute;
+  right: -0.5em;
+  font-size: 40px;
+}
+
+.web_lecture_l>li:not(:last-child)::before {
+  content: '';
+  background: #c3c3c3;
+  width: 1px;
+  height: 200%;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 18px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+/*-----------使用するソフトウェア-----------*/
+.web_soft {
+  margin: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+}
+
+
+/* === 垂直線のstyle === */
+.web_soft::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px solid #fff;
+}
+
+
+.web_box1,
+.web_box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.web_box1 {
+  margin-left: 23%;
+}
+
+.web_box2 {
+  margin-right: 23%;
+}
+
+.web_soft1,
+.web_soft2,
+.web_soft3,
+.web_soft4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.web_soft img {
+  max-width: 60%;
+  height: auto;
+  margin: 20px;
+}
+
+/* === 在学中に受けた資格 === */
+.web_qualification {
+  text-align: center;
+}
+
+.web_qualification img {
+  max-width: 65%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === 学生の就職情報 web_findwork === */
+.web_findwork1 {
+  text-align: center;
+  margin-top: 12%;
+}
+
+.web_findwork2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5% 23% 0 23%;
+  justify-items: center;
+}
+
+.work_text2 {
+  padding-left: 10%;
+}
+
+/* === 卒業生の作品 ===*/
+.web_bg {
+  text-align: center;
+  margin: 15% 0 5% 0;
+}
+
+.web_video video {
+  text-align: center;
+  width: 50%;
+  margin-top: 5%;
+}
+
+/* === 学校で使用するパソコン === */
+.web_pc h2 {
+  text-align: center;
+  margin: 15% 0 5% 0;
+}
+
+.web_pc_flex {
+  margin-top: 4%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.web_pc_img {
+  width: 22%;
+  height: 12%;
+  padding: 0;
+  margin: 0 3% 0 15%;
+  overflow: hidden;
+  position: relative;
+}
+
+.web_pc_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.web_pc_rights {
+  height: 100%;
+}
+
+.web_pc_right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 0 0;
+}
+
+.web_pc_title,
+.web_pc_text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5%;
+}
+
+.web_pc_text {
+  margin-left: -13rem;
+  margin-right: 6rem;
+}
+
+.web_pc_text2 {
+  text-align: right;
+  margin-right: 17%;
+  margin-top: 4%;
+}
+
+
+
+/* === contact === */
+.web_contact {
+  text-align: center;
+}
+
+.web_contact h2 {
+  margin-top: 16%;
+}
+
+a.web_contact {
+  margin: 10% 40%;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: solid 1px;
+  text-align: center;
+  text-decoration: none !important;
+  margin-top: 2%;
+}
+
+a.web_contact:before {
+  content: "";
+  display: inline-block;
+  width: 15%;
+  height: 1.5em;
+  margin: 7% 0;
+  background: url("../image/mail.png") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+a.web_contact:hover {
+  background: #6e6c6ca0;
+  color: #ffffff;
+}
+
+/*モバイル対応*/
+@media(max-width:767px) {
+
+  .web_sch_pic img {
+    width: 30%;
+  }
+
+
+
+  .web_curriculum {
+    display: block;
+    text-align: center;
+    margin: 10%;
+  }
+
+
+  .web_schedule {
+    border: none;
+  }
+
+  .web_gozira {
+    display: none;
+  }
+
+ 
+
+  /*就職情報　縦書き*/
+
+  .web_job table th,
+  table td {
+    display: block;
+    width: 100%;
+  }
+/* === slider === */
+.slider-container {
+  position: relative;
+  }
+  
+.slider .slider-item{
+  height: 50%;
+}
+
+.slider img {
+  height: 50%;
+}
+
+.front-image {
+  height: 100%;
+  position: absolute;
+  top: 144px;
+}
+
+.back-image {
+  height: 100%;
+  position: absolute;
+  top: 144px;
+}
+
+}
+/* ------------------ web page  end ------------------ */
+
+

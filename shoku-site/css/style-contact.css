@@ -1,0 +1,660 @@
+/* ------------------------------- ヘッダー部分 ------------------------------- */
+
+li {
+    display: inline;
+    padding: 0 10px;
+    border-right: #ddd 1px solid;
+    color: #eaeaea;
+
+}
+
+li:last-child {
+    border-right: none;
+}
+
+ul.nav_right {
+    text-align: right;
+    padding: 30px 30px 0 0;
+    margin: 0;
+}
+
+a {
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------- 全ページ共通部分 -------------------------------*/
+body {
+    background-color: #1a1a1a;
+    font-family: Shippori Mincho;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #eaeaea;
+    margin: 0;
+}
+
+
+
+/*------------------------------- フッター　はじめ -------------------------------*/
+footer {
+    position: relative;
+    overflow: hidden;
+    padding-top: 10%;
+}
+
+.ftr {
+    justify-content: space-between;
+    margin: 10% 30% 2% 30%;
+}
+
+.ftr_Instagram {
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 85%;
+}
+
+canvas {
+    position: absolute;
+    margin: 0 auto;
+}
+
+.ftr_aiwa {
+    position: absolute;
+    transform: translateX(100%);
+    padding-top: 5%;
+    text-align: center;
+
+}
+
+.ftr_aiwa img {
+    width: 10%;
+}
+
+.flex {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    justify-content: space-between;
+    font-size: 0.3rem;
+}
+
+.flex1 {
+    line-height: 3em;
+    text-align: center;
+}
+
+.flex1 p {
+    color: #1a1a1a;
+    line-height: 1.5rem;
+}
+
+.flex2 p {
+    color: #1a1a1a;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+}
+
+.Aiwa {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+}
+
+#target {
+    z-index: -1;
+}
+
+.main_copyright {
+    font-family: Calisto MT;
+    text-align: center;
+    padding-top: 10%;
+    color: #1a1a1a;
+    font-size: 0.875rem;
+}
+
+/*------------------------------- フッター　終わり -------------------------------*/
+
+
+
+
+/* =================== contact ===================== */
+/* main */
+.body {
+    background-color: #EAEAEA;
+    color: #1a1a1a;
+}
+
+.form_nav {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding-bottom: 4%;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: Calisto MT;
+    margin: 4% 0 2%;
+}
+
+.form_com {
+    text-align: center;
+    font-family: Shippori Mincho;
+}
+
+.form_tag {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #000;
+    padding: 30px 0 20px;
+}
+
+.form_table {
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+
+.form_contact {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.form table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+}
+
+.form th {
+    padding: 20px;
+    border-top: 1px solid #c1c1c1;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.form td {
+    border-top: 1px solid#c1c1c1;
+}
+
+.form_line {
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.form_line .toi {
+    position: relative;
+}
+
+.form_line label {
+    position: absolute;
+    top: 30px;
+}
+
+/* すべての input 要素の枠線の色を非表示にする */
+form input,
+form select,
+form textarea {
+    border-color: transparent;
+    font-family: Shippori Mincho;
+}
+
+/* オプション: フォーカス時に影やアウトラインを非表示にする */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=date],
+.form_category {
+    max-width: 300px;
+    width: 70%;
+    padding: 10px;
+    outline: none;
+}
+
+.form_category {
+    max-width: 77%;
+    width: 100%;
+    padding: 12px;
+    outline: none;
+    font-family: Shippori Mincho;
+}
+
+.form_line .comment {
+    max-width: 76%;
+    margin: 20px 0 20px;
+}
+
+.PrivacyPolicy {
+    display: none;
+    color: #1a1a1a;
+}
+
+.form_checkbox {
+    position: relative;
+}
+
+.PrivacyPolicy {
+    max-height: calc(100vh / 3);
+    /* Set the max height to one-third of the viewport height */
+    overflow-y: auto;
+    /* Enable vertical scrolling if content exceeds the max height */
+    display: none;
+    /* Initially hide the element */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: left;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Make sure it's on top of the background */
+}
+
+.background-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    /* Adjust the transparency as needed */
+    z-index: 1;
+    /* Place it behind the PrivacyPolicy */
+}
+
+.consent:hover .background-overlay {
+    display: block;
+}
+
+#consent {
+    height: 0;
+}
+
+.PrivacyPolicy .close-button {
+    background-color: #c1c1c1;
+    color: #EAEAEA;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+/* ボタンのスタイル */
+.form input[type=submit] {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border: none;
+    margin: 50px auto;
+    color: #ffff;
+    background-color: #696969;
+    font-size: 1rem;
+    font-family: 'Shippori Mincho', sans-serif;
+    text-align: center;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transform-origin: center bottom;
+    transform-style: preserve-3d;
+    /* Add 3D transformation style */
+}
+
+form input[type=submit]:hover {
+    background-color: #1a1a1a;
+    transform: perspective(1000px) rotateX(0deg);
+    /* Apply 3D transformation on hover */
+}
+
+
+.consent input[type="checkbox"]+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px 'Open Sans', Arial, sans-serif;
+    color: #000;
+    /* チェックボックスラベルの文字色 */
+    cursor: pointer;
+}
+
+.consent input[type="checkbox"]+label:last-child {
+    margin-bottom: 0;
+}
+
+.consent input[type="checkbox"]+label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #294996;
+    /* チェックボックスのボーダー色 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+.consent input[type="checkbox"]:checked+label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 新しいスタイル */
+.form_error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 20px;
+    padding: 10px;
+    color: #ff4500;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.form_table .error::before {
+    color: #ff4500;
+    font-size: 1rem;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.form_checkbox .form_error {
+    color: #ff4500;
+    font-size: 1rem;
+    margin-top: 5px;
+    text-align: left;
+    /* 左寄せに設定 */
+    width: 100%;
+    /* 幅を100%に設定 */
+    margin-left: 0;
+    /* 左マージンをリセット */
+}
+
+.error {
+    border: 1px solid #ff4500;
+}
+
+.form_checkbox {
+    text-align: left;
+    /* Change to left-align the text */
+    margin-top: 20px;
+    /* Add margin for spacing */
+}
+
+.form_checkbox p {
+    font-size: 0.875rem;
+    font-family: Shippori Mincho;
+}
+
+.form_checkbox .consent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.form_bottons {
+    text-align: center;
+    /* ボタンを中央に配置するためにテキストを中央寄せ */
+}
+
+.form_footer {
+    padding: 2% 0 1%;
+}
+
+.form_copyright {
+    font-family: Calisto MT;
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 0.875rem;
+}
+
+
+
+/* ============== contact_result.html ================ */
+
+.result_comment {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.result_comment p {
+    color: #1a1a1a;
+
+}
+
+.result_footer {
+    margin-top: 10%;
+}
+
+
+
+
+
+/* ======= contact レスポンシブ対応 =======*/
+@media (max-width: 767px) {
+    .form_table {
+        width: 100%;
+    }
+
+    .form th,
+    .form td {
+        width: auto;
+        display: block;
+        text-align: left;
+    }
+
+    .form_line label {
+        position: relative;
+        top: 0;
+    }
+
+    .form input[type=text],
+    .form input[type=email],
+    .form input[type=date] {
+        width: 93%;
+        max-width: none;
+    }
+
+    .form_category {
+        width: 100%;
+        max-width: none;
+    }
+
+    .form_line .comment {
+        width: 98%;
+        max-width: none;
+    }
+
+    .PrivacyPolicy {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .form input[type=submit] {
+        width: 40%;
+        margin: 20px 0;
+    }
+
+    .form_checkbox p {
+        font-size: 0.75rem;
+    }
+}
+
+
+
+
+/* モバイル　ハンバーガーメニュー */
+
+
+@media (min-width: 767px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Adjust the navigation for larger screens if needed */
+    .form_nav {
+        display: block; /* Make sure the regular navigation is visible */
+    }
+}
+
+
+/* ハンバーガーメニュー */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #3584bb;
+    box-shadow: #696969;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    /* border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff; */
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+.menu-content ul li {
+    /* border-bottom: solid 1px #ffffff;
+    list-style: none; */
+    text-align: center; /* メニューアイテムを中央に配置 */
+}
+
+
