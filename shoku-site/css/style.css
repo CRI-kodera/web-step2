@@ -136,7 +136,7 @@ p {
 }
 
 .p-top-main__about {
-  margin-top: 20%;
+  margin-top: 110vh; /* ファーストビューの下に配置 */
   opacity: 0;
   /* 最初は非表示にしておく */
   transition: all 2.5s;
@@ -195,6 +195,7 @@ p {
   position: absolute;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
+  white-space: nowrap;
   opacity: 0.3;
   color: #c1c1c1;
   font-size: 7rem;
