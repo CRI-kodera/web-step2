@@ -6,7 +6,13 @@ a {
 }
 
 /*------------------------------- 全ページ共通部分 -------------------------------*/
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  position: relative;
   background-color: #1a1a1a;
   font-family: Shippori Mincho;
   margin: 0;
@@ -72,8 +78,13 @@ p {
   position: absolute;
   margin-left: 12.9%;
   width: 18%;
-  height: 317.8%;
-  background: #eaeaea;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #eaeaea 0%,
+    #eaeaea 40%,
+    transparent 92%
+  );
   z-index: -1;
 }
 
@@ -214,20 +225,29 @@ p {
 .p-top-main__courses {
   display: flex;
   justify-content: center;
+  align-items: stretch;
+}
+
+.p-course-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .p-course-card--web {
   padding: 4% 3.5% 5% 3.5%;
   color: #eaeaea;
-  background-color: #e83e2a;
+  background-color: #8e8e8e;
 }
 
 .p-course-card__body {
-  margin: auto;
+  width: 100%;
   text-align: left;
   line-height: 5;
   outline: 0.02rem solid #ffffff;
   outline-offset: 0.35rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .p-course-card__description {
@@ -239,7 +259,7 @@ p {
 .p-course-card--movie {
   padding: 4% 3.5% 5% 3.5%;
   color: #eaeaea;
-  background-color: #d6a735;
+  background-color: #4d0000;
 }
 
 .p-course-card__title {
@@ -260,6 +280,7 @@ p {
 .p-course-card__link {
   text-align: right;
   padding: 40px 20px;
+  margin-top: auto;
 }
 
 .p-top-main__training {
