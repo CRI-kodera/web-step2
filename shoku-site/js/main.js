@@ -1,34 +1,34 @@
 "use strict";
 
-// progress
-const documentBody = document.querySelector("body");
-let newElement = document.createElement("div");
-newElement.setAttribute("class", "zoomCurtainbg");
-documentBody.prepend(newElement);
-let coverElement = document.createElement("div");
-coverElement.setAttribute("id", "container");
-newElement.prepend(coverElement);
+// progress　初回のみ表示
+window.addEventListener("load", () => {
+  const hasVisited = localStorage.getItem("hasVisited");
 
-documentBody.classList.add("pageOn");
-setTimeout(function () {
-  newElement.style.display = "none";
-}, 2000);
+  const finishLoading = () => {
+    document.documentElement.classList.add("loaded");
+    document.body.classList.add("loaded");
+  };
+
+  if (hasVisited) {
+    finishLoading();
+  } else {
+    setTimeout(() => {
+      finishLoading();
+      localStorage.setItem("hasVisited", "true");
+    }, 2300);
+  }
+});
 
 window.addEventListener(
   "beforeunload",
   () => {
-    documentBody.classList.add("fadeout");
+    document.body.classList.add("fadeout");
     setTimeout(function () {
-      documentBody.style.display = "none";
+      document.body.style.display = "none";
     }, 1000);
   },
   false,
 );
-
-$(window).on("load", function () {
-  $(".p-top-hero__content").delay(1500).fadeOut("slow"); //ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-  $(".p-top-hero__content").delay(1200).fadeOut("slow"); //ロゴを1.2秒（1200ms）待機してからフェードアウト
-});
 
 //ロゴ回転
 
@@ -71,48 +71,48 @@ if (academyImage) {
   );
 }
 
-//じわっ
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".p-top-main__about");
+  if (!elements.length) {
+    return;
+  }
 
-// blurTriggerにblurというクラス名を付ける定義
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.65,
+      },
+    );
 
-// function BlurTextAnimeControl() {
-//   $('.p-top-main__welcome-text').each(function () { // welcome text のクラス名が
-//     var elemPos = $(this).offset().top - 400;//要素より、50px上の
-//     var scroll = $(window).scrollTop();
-//     var windowHeight = $(window).height();
-//     if (scroll >= elemPos - windowHeight) {
-//       $(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
-//     } else {
-//       $(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
-//     }
-//   });
-// }
-// // 画面が読み込まれたらすぐに動かしたい場合の記述
-// $(window).on('load', function () {
-//   BlurTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
-// });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+    elements.forEach((el) => observer.observe(el));
+  } else {
+    const checkVisibility = () => {
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
 
-// フェードアウト
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const elementTop = rect.top + scrollY;
+        if (scrollY > elementTop - windowHeight + 100) {
+          el.classList.add("is-visible");
+        }
+      });
+    };
 
-$(function () {
-  // ウィンドウをスクロールしたら…
-  $(window).scroll(function () {
-    // ウィンドウの高さを取得
-    const wHeight = $(window).height();
-    // スクロールした量を取得
-    const wScroll = $(window).scrollTop();
-    // それぞれのblockクラスに対して…
-    $(".p-top-main__about").each(function () {
-      // それぞれのblockクラスのウィンドウからの高さを取得
-      const bPosition = $(this).offset().top;
-      // スクロールした量が要素の高さを上回ったら
-      // その数値にウィンドウの高さを引き、最後に200pxを足す
-      if (wScroll > bPosition - wHeight + 500) {
-        $(this).addClass("is-visible");
-      }
-    });
-  });
-});
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("load", checkVisibility);
+  }
+}
+
+revealOnScroll();
 
 //作品紹介
 

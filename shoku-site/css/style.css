@@ -33,45 +33,96 @@ p {
   margin: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  line-height: 1.3em;
+:root {
+  --bg-color: #000;
+  --drop-color: #fff;
 }
 
-/* progress */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-.p-top-hero__content {
-  position: relative;
+.loaded html,
+.loaded body {
+  overflow: auto;
+}
+
+.c-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  z-index: 9999;
   overflow: hidden;
-  background-color: black;
 }
 
-.p-top-hero__main-logo {
-  width: 10%;
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
+.c-loader__drop {
+  width: 10px;
+  height: 10px;
+  background: var(--drop-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  animation: fall 0.8s cubic-bezier(0.4, 0, 0.6, 1) forwards;
 }
 
-.p-top-hero__shape {
-  position: fixed;
-  z-index: 1;
-  animation: sample 3s linear infinite;
-  transform: scale(0.1);
+.c-loader__ripple {
+  width: 20px;
+  height: 20px;
+  background: var(--drop-color);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  animation: expand 1.5s ease-out 0.8s forwards;
 }
 
-@keyframes sample {
-  to {
-    transform: scale(5, 5);
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: scaleY(1.2);
+  }
+  90% {
+    top: 50%;
+    transform: scaleY(1);
+  }
+  100% {
+    top: 50%;
+    transform: scale(1.5);
+    opacity: 0;
   }
 }
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+.loaded .c-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* progress */
 
 /*------------------------------- トップページ　はじめ -------------------------------*/
 .p-top-page__center-box {
@@ -131,19 +182,23 @@ p {
 
 .p-top-main__welcome {
   position: absolute;
-  right: 4%;
+  right: 3%;
 }
-
-/* .p-top-main__welcome-text {
-  opacity: 0;
-} */
 
 .p-top-main__welcome-text.u-vertical-text {
   writing-mode: vertical-rl;
-  margin-top: -110%;
+  margin-top: 45%;
   line-height: 200%;
   font-size: 2.1875rem;
   color: #c1c1c1;
+}
+
+.p-top-main__welcome-line {
+  display: inline-block;
+}
+
+.p-top-main__welcome-line--indented {
+  transform: translateY(1em);
 }
 
 .p-top-main__about {
@@ -316,7 +371,7 @@ p {
   color: #c1c1c1;
   font-size: 7rem;
   letter-spacing: 15px;
-  margin-top: -40%;
+  margin-top: -50%;
   margin-left: 0px;
   left: 0;
 }
@@ -734,10 +789,6 @@ canvas {
 /*------------------------------- レスポンシブ対応 -------------------------------*/
 
 @media screen and (max-width: 767px) {
-  #top-splash {
-    display: none;
-  }
-
   .p-top-page__center-box {
     display: none;
   }
