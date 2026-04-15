@@ -1,73 +1,68 @@
-# 実装方針
-本ステップでは保守性と再利用性を高めるため、  
-BEM（Block, Element, Modifier）の概念をベースに、FLOCSSのレイヤー構造を採用した命名規則を適用します。
+# BEM & FLOCSS
+
+Web制作において、多人数での開発や長期的なメンテナンスをスムーズにするための「命名規則（BEM）」と「ファイル構成（FLOCSS）」のガイドラインです。
 
 ---
-### BEMの基本構造
-クラス名は Block__Element--Modifier の形式で記述します。
 
-・Block (block): スタンドアロンで成立する構成単位（例：c-button, p-card）。  
-・Element (__element): Blockを構成する依存要素。アンダースコア2つで繋ぎます（例：__title, __item）。  
-・Modifier (--modifier): BlockやElementの「状態」や「変化」を表します。ハイフン2つで繋ぎます（例：--large, --active）。  
+## 1. BEM（ベム）
+BEMは、HTMLのクラス名を決めるための命名ルールです。
 
----
-### クラス名の要点
-**① Elementの連結は行わない（孫要素の禁止）**
-BEMでは構造を浅く保つことがルールです。
-HTMLの階層が深くても、クラス名で階層を表現してはいけません。
 
-❌：.c-card__list__item （孫要素になっている）   
-⭕️：.c-card__item （常にBlock直下の要素として扱う）
+### 構成要素
+| 単位 | 意味 | 書き方 | 例 |
+| :--- | :--- | :--- | :--- |
+| **Block** | 独立した塊（パーツ） | `block` | `.card`, `.btn` |
+| **Element** | Blockを構成する要素 | `__` で繋ぐ | `.card__title`, `.card__img` |
+| **Modifier** | 状態や見た目の変化 | `--` で繋ぐ | `.card--large`, `.btn--red` |
 
-**② 意味（役割）で命名する**
-「赤色」「右側」といった見た目（デザイン）ではなく、その要素の「役割」で命名します。
-
-❌NG：.c-button--red   
-⭕️OK：.c-button--danger
-
-**③ 命名の粒度に迷ったら**
-「その要素が他の場所でも形を変えずに使えるか？」を基準にします。
-
-・使い回すなら c- (Component)    
-・特有のレイアウトや大きな塊なら p- (Project)
+### BEMのメリット
+- **影響範囲が明確**: クラス名が重複しにくいため、意図しない場所のスタイルが崩れません。
+- **構造が読み取れる**: 名前を見るだけで「どこのパーツの、どの要素か」が分かります。
 
 ---
-### 具体例
 
-> HTML
-```html
-<section class="p-news-section">
-  <h2 class="p-news-section__title">お知らせ</h2>
-  
-  <ul class="p-news-section__list">
-    <li class="p-news-section__item">
-      <a href="#" class="c-button c-button--primary">
-        <span class="c-button__label">詳細を見る</span>
-      </a>
-    </li>
-  </ul>
-</section>
-```
-
-> CSS
-```scss
-.c-button {
-  display: inline-block;
-  padding: 10px 20px;
-  
-  &__text {
-    font-weight: bold;
-  }
-  
-  &--primary {
-    background-color: blue;
-    color: white;
-  }
-  
-  &.is-active {
-    opacity: 0.8;
-  }
-}
-```
+## 2. FLOCSS（フロックス）
+FLOCSSは、CSSファイルを役割ごとに整理整頓するためのフォルダ分けルールです。
 
 
+### レイヤー構成
+
+#### ① Foundation
+サイト全体の基盤となるスタイル。
+- `_reset.css` (ブラウザ間の差異をなくす)
+- `_base.css` (全体の背景色、フォント設定)
+
+#### ② Layout
+ヘッダーやフッターなど、ページ内の大きな枠組み。
+- 命名：`.l-header`, `.l-footer`, `.l-main`
+
+#### ③ Object
+再利用可能なパーツをさらに3つに分類します。
+
+| 分類 | 役割 | 命名例 |
+| :--- | :--- | :--- |
+| **Component** | どこでも使える最小単位のパーツ | `.c-button`, `.c-icon` |
+| **Project** | 意味のあるまとまり（カードや記事リストなど） | `.p-card`, `.p-entry-list` |
+| **Utility** | 微調整用の便利クラス（余白や文字色など） | `.u-mt-10` (margin-top: 10px) |
+
+---
+
+## Sass（SCSS）での管理イメージ
+
+通常、以下のようにファイルを分割して管理します。
+
+```text
+scss/
+  ├── foundation/
+  │    ├── _base.scss
+  │    └── _reset.scss
+  ├── layout/
+  │    ├── _header.scss
+  │    └── _footer.scss
+  └── object/
+       ├── component/
+       │    └── _button.scss
+       ├── project/
+       │    └── _card.scss
+       └── utility/
+            └── _margin.scss

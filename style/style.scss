@@ -1,21 +1,5 @@
-@import "foundation/reset.scss";
-@import "layout/layout.scss";
-@import "object/component.scss";
-@import "object/project.scss";
-@import "object/utility.scss";
-
-
-
-// .p-top {
-//     text-align: center;
-
-//     &__title {
-//         color: red;
-//     }
-
-//     &__subtitle {
-//         color: yellow;
-//     }
-// }
-
-
+@use "foundation/reset";
+@use "layout/layout";
+@use "object/component";
+@use "object/project";
+@use "object/utility";
