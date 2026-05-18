@@ -10,52 +10,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="description"
+      content="matsumoto toraki のポートフォリオサイト。Webデザインとコーディング作品を紹介します。"
+    />
+    <link rel="icon" href="image/logo.png" type="image/png" />
 
-    <title>TOP_page</title>
+    <title>matsumoto toraki | portfolio</title>
   </head>
 
-  <body class="p-top-page">
+  <body id="top" class="p-top-page">
     <div class="c-loader">
       <div class="c-loader__drop"></div>
       <div class="c-loader__ripple"></div>
     </div>
-    <div class="p-top-page__center-box"></div>
+    <div class="p-top-page__overlay"></div>
     <header class="l-header p-site-header">
       <div class="c-hamburger p-site-header__menu">
         <div class="c-hamburger__box"></div>
         <input type="checkbox" id="menu-btn-check-primary" />
         <label for="menu-btn-check-primary" class="c-hamburger__button">
-          <span></span>
-        </label>
-        <div class="c-hamburger__content">
-          <ul class="c-hamburger__list">
-            <li class="c-hamburger__item">
-              <a class="c-hamburger__link" href="index.html">top</a>
-            </li>
-            <li class="c-hamburger__item">
-              <a
-                class="c-hamburger__link"
-                href="main/web_creator/team_site/web.html"
-                >web class</a
-              >
-            </li>
-            <li class="c-hamburger__item">
-              <a
-                class="c-hamburger__link"
-                href="main/movie_creator/team_site/movie.html"
-                >movie class</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div
-        class="c-hamburger p-site-header__menu p-site-header__menu--secondary"
-      >
-        <div class="c-hamburger__box"></div>
-        <input type="checkbox" id="menu-btn-check-secondary" />
-        <label for="menu-btn-check-secondary" class="c-hamburger__button">
           <span></span>
         </label>
         <div class="c-hamburger__content">
@@ -108,7 +82,7 @@
       <p class="p-top-main__decoration">
         <img src="image/circle.png" alt="装飾の円" class="p-top-main__cake" />
       </p>
-      <div id="top_difference" class="p-top-main__title-wrap">
+      <div id="top-difference" class="p-top-main__title-wrap">
         <h1 class="p-top-main__title">
           <span class="p-top-main__title-main">portfolio</span
           ><span class="p-top-main__title-sub"></span
@@ -215,30 +189,70 @@
       <h2 class="p-top-main__works-title">Works</h2>
       <div class="p-top-main__works-slider">
         <div class="p-top-main__spinner">
-          <div class="p-top-main__panel p-top-main__panel--card"></div>
-          <div class="p-top-main__panel p-top-main__panel--burger"></div>
-          <div class="p-top-main__panel p-top-main__panel--greenman"></div>
-          <div class="p-top-main__panel p-top-main__panel--water"></div>
-          <div class="p-top-main__panel p-top-main__panel--flyer"></div>
-          <div class="p-top-main__panel p-top-main__panel--order"></div>
-          <div class="p-top-main__panel p-top-main__panel--dm"></div>
-          <div class="p-top-main__panel p-top-main__panel--perfume"></div>
-          <div class="p-top-main__panel p-top-main__panel--narumi-01"></div>
-          <div class="p-top-main__panel p-top-main__panel--narumi-02"></div>
-          <div class="p-top-main__panel p-top-main__panel--sakamoto"></div>
-          <div class="p-top-main__panel p-top-main__panel--kuzira"></div>
-          <div class="p-top-main__panel p-top-main__panel--milk-01"></div>
-          <div class="p-top-main__panel p-top-main__panel--milk-02"></div>
-          <div class="p-top-main__panel p-top-main__panel--fan"></div>
-          <div class="p-top-main__panel p-top-main__panel--fuji"></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--card"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--burger"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--greenman"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--water"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--flyer"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--order"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--dm"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--perfume"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--narumi-01"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--narumi-02"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--sakamoto"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--kuzira"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--milk-01"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--milk-02"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--fan"
+          ></div>
+          <div
+            class="p-top-main__panel c-works-slider__panel c-works-slider__panel--fuji"
+          ></div>
           <div class="p-top-main__fade"></div>
         </div>
       </div>
       <div class="c-slider-pagination p-top-main__pagination">
-        <button type="button" id="prev" class="c-slider-pagination__button">
+        <button
+          type="button"
+          id="slider-prev"
+          class="c-slider-pagination__button"
+        >
           &#8592;
         </button>
-        <button type="button" id="next" class="c-slider-pagination__button">
+        <button
+          type="button"
+          id="slider-next"
+          class="c-slider-pagination__button"
+        >
           &#8594;
         </button>
       </div>
@@ -265,21 +279,21 @@
         /></a>
       </div>
       <div class="p-top-main__map">
-        <iframe
+        <!-- <iframe
+          class="p-top-main__map-frame"
           title="学校所在地マップ"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1661.8968777370094!2d130.4168989820781!3d33.58470382925192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419147607feb23%3A0x429b8a9df6ec0924!2z5oSb5ZKM44K344K544OG44Og44Ko44Oz44K444OL44Ki5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1705556075364!5m2!1sja!2sjp"
           width="400"
           height="300"
-          style="border: 0"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> -->
       </div>
       <div class="c-page-top p-top-main__page-top">
-        <a href="#"><img src="image/gotop.png" alt="ページ上部へ戻る" /></a>
+        <a href="#top"><img src="image/gotop.png" alt="ページ上部へ戻る" /></a>
       </div>
-      <div class="p-site-footer__instagram p-site-footer__instagram--sp">
+      <div class="p-site-footer__instagram u-hidden-pc" aria-hidden="true">
         <a
           href="https://www.instagram.com/aiwa.kunren"
           target="_blank"
@@ -299,7 +313,7 @@
           <img src="image/contact_sns.png" alt="Instagram" />
         </a>
       </div>
-      <div id="TRUE_canvas" class="p-site-footer__canvas">
+      <div id="true-canvas" class="p-site-footer__canvas">
         <canvas id="target" width="1920" height="2000"></canvas>
       </div>
       <div class="p-site-footer__logo">
@@ -330,13 +344,13 @@
           <p class="p-site-footer__copyright">&copy; 2026 toraki matsumoto</p>
         </div>
       </div>
-      <p class="p-site-footer__academy-mark">
+      <div class="p-site-footer__academy-mark">
         <img
           src="image/aiwa_academy.png"
           alt=""
           class="p-site-footer__academy-image"
         />
-      </p>
+      </div>
     </footer>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>

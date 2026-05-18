@@ -125,7 +125,7 @@ body {
 /* progress */
 
 /*------------------------------- トップページ　はじめ -------------------------------*/
-.p-top-page__center-box {
+.p-top-page__overlay {
   position: absolute;
   margin-left: 12.9%;
   width: 18%;
@@ -521,67 +521,67 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.p-top-main__panel--card {
+.c-works-slider__panel--card {
   background-image: url(../image/card.png);
 }
 
-.p-top-main__panel--burger {
+.c-works-slider__panel--burger {
   background-image: url(../image/burger.png);
 }
 
-.p-top-main__panel--greenman {
+.c-works-slider__panel--greenman {
   background-image: url(../image/GREENMAN.png);
 }
 
-.p-top-main__panel--water {
+.c-works-slider__panel--water {
   background-image: url(../image/water.jpg);
 }
 
-.p-top-main__panel--flyer {
+.c-works-slider__panel--flyer {
   background-image: url(../image/flyer.png);
 }
 
-.p-top-main__panel--order {
+.c-works-slider__panel--order {
   background-image: url(../image/ORDER.png);
 }
 
-.p-top-main__panel--dm {
+.c-works-slider__panel--dm {
   background-image: url(../image/DM.png);
 }
 
-.p-top-main__panel--perfume {
+.c-works-slider__panel--perfume {
   background-image: url(../image/perfume.png);
 }
 
-.p-top-main__panel--narumi-01 {
+.c-works-slider__panel--narumi-01 {
   background-image: url(../image/narumi.jpg);
 }
 
-.p-top-main__panel--narumi-02 {
+.c-works-slider__panel--narumi-02 {
   background-image: url(../image/narumi2.jpg);
 }
 
-.p-top-main__panel--sakamoto {
+.c-works-slider__panel--sakamoto {
   background-image: url(../image/sakamoto.png);
 }
 
-.p-top-main__panel--kuzira {
+.c-works-slider__panel--kuzira {
   background-image: url(../image/kuzira.png);
 }
 
-.p-top-main__panel--milk-01 {
+.c-works-slider__panel--milk-01 {
   background-image: url(../image/milk.png);
 }
 
-.p-top-main__panel--milk-02 {
+.c-works-slider__panel--milk-02 {
   background-image: url(../image/milk2.png);
 }
 
-.p-top-main__panel--fan {
+.c-works-slider__panel--fan {
   background-image: url(../image/fan.png);
 }
 
-.p-top-main__panel--fuji {
+.c-works-slider__panel--fuji {
   background-image: url(../image/fuji.png);
 }
 
@@ -687,6 +687,11 @@ a.p-top-main__contact-link:hover {
   margin: 0 auto;
 }
 
+.p-top-main__map iframe,
+.p-top-main__map .p-top-main__map-frame {
+  border: 0;
+}
+
 .p-top-main__page-top {
   text-align: right;
   padding-right: 2%;
@@ -780,7 +785,8 @@ canvas {
   font-size: 0.875rem;
 }
 
-.p-site-footer__instagram--sp {
+.p-site-footer__instagram--sp,
+.u-hidden-pc {
   display: none;
 }
 
@@ -789,7 +795,7 @@ canvas {
 /*------------------------------- レスポンシブ対応 -------------------------------*/
 
 @media screen and (max-width: 767px) {
-  .p-top-page__center-box {
+  .p-top-page__overlay {
     display: none;
   }
 
@@ -970,18 +976,20 @@ canvas {
     display: none;
   }
 
-  .p-site-footer__instagram--sp {
+  .p-site-footer__instagram--sp,
+  .u-hidden-pc {
     display: block;
     text-align: center;
     width: 50%;
     margin: 0 auto;
   }
 
-  .p-site-footer__instagram--sp img {
+  .p-site-footer__instagram--sp img,
+  .u-hidden-pc img {
     width: 30%;
   }
 
-  #TRUE_canvas {
+  #true-canvas {
     display: none;
   }
 
@@ -1109,7 +1117,8 @@ canvas {
     height: 43%;
   }
 
-  .p-site-footer__instagram--sp img {
+  .p-site-footer__instagram--sp img,
+  .u-hidden-pc img {
     width: 40%;
   }
 
