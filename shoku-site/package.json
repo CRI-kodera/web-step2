@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:css": "sass css/style.scss css/style.css --style=expanded",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "sass": "^1.74.1"
+  }
+}
