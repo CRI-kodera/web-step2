@@ -1,23 +1,15 @@
-/* ==========================================================================
-   Foundation / Variables
-   ========================================================================== */
-
+@charset "UTF-8";
 :root {
-  --color-bg:       #1a1a1a;
-  --color-text:     #eaeaea;
+  --color-bg: #1a1a1a;
+  --color-text: #eaeaea;
   --color-sub-text: #c1c1c1;
-  --color-white:    #fff;
-  --color-black:    #000;
-
-  /* Loader（パレット変数にマッピング） */
-  --bg-color:   var(--color-black);
+  --color-white: #fff;
+  --color-black: #000;
+  --bg-color: var(--color-black);
   --drop-color: var(--color-white);
 }
 
-/* ==========================================================================
-   Foundation / Base
-   ========================================================================== */
-
+/* Foundation – Base styles only (no component styles here) */
 a {
   color: #eaeaea;
   text-decoration: none;
@@ -62,10 +54,90 @@ html.loaded body {
   overflow: auto;
 }
 
-/* ==========================================================================
-   Layout
-   ========================================================================== */
+/* Responsive – メディアクエリとユーティリティのデフォルト表示制御 */
+/* --------------------------------------------------------------------------
+   Utility: デフォルト非表示（PC向け非表示クラス）
+   -------------------------------------------------------------------------- */
+.p-site-footer__instagram--sp,
+.u-hidden-pc {
+  display: none;
+}
 
+/* --------------------------------------------------------------------------
+   SP: max-width 767px
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .p-top-page__overlay {
+    display: none;
+  }
+  .p-top-main__cake {
+    position: absolute;
+    margin: 45% 0 10% 0;
+    width: 100%;
+    z-index: -100;
+  }
+  .p-top-main__title {
+    font-size: 5rem;
+    padding: 0 0 0 8%;
+  }
+  .p-top-main__welcome-text.u-vertical-text {
+    display: none;
+  }
+  .p-top-main__about {
+    margin-top: 20%;
+  }
+  .p-top-main__section-title {
+    font-size: 2rem;
+    line-height: 80px;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+  .p-site-footer__instagram {
+    display: none;
+  }
+  .p-site-footer__instagram--sp,
+  .u-hidden-pc {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .p-site-footer__instagram--sp img,
+  .u-hidden-pc img {
+    width: 30%;
+  }
+  /* #true-canvas はJS用にIDを残すが、表示制御はクラスで行う */
+  .p-site-footer__canvas {
+    display: none;
+  }
+}
+/* --------------------------------------------------------------------------
+   SP: max-width 375px
+   -------------------------------------------------------------------------- */
+@media (max-width: 375px) {
+  .p-top-main__cake {
+    position: absolute;
+    padding-top: 15%;
+    width: 100%;
+    z-index: -100;
+    margin: 0% 10% 10% 0%;
+  }
+  .p-top-main__title {
+    font-size: 3.8rem;
+    padding: 35% 0 0 15%;
+    justify-content: center;
+  }
+  .p-site-footer__instagram--sp img,
+  .u-hidden-pc img {
+    width: 40%;
+  }
+}
+/* Layout – Page skeleton only (no project-specific styles here) */
+/*
+  役割: ページの主要な骨格（ヘッダー、フッター、メインコンテンツエリア）を定義する。
+  命名: クラス名頭に「l-」を付ける。
+  ※ 見た目の装飾は p- (Project) に持たせ、配置の枠のみをここに書く。
+*/
 .l-header {
   position: relative;
 }
@@ -81,14 +153,100 @@ html.loaded body {
   padding-top: 10%;
 }
 
-/* ==========================================================================
-   Object / Component
-   ========================================================================== */
+/* 
+【Utility】
+役割: 単一の役割を持つ汎用性の高いスタイルを定義して、HTML側で使い回します。
+命名: HTMlのクラス名に指定して使う。 
+*/
+.u-font-weight-bold {
+  font-weight: bold;
+}
 
+.u-font-size-10 {
+  font-size: 12px;
+}
+
+.u-font-size-12 {
+  font-size: 12px;
+}
+
+.u-font-size-14 {
+  font-size: 14px;
+}
+
+.u-font-size-16 {
+  font-size: 16px;
+}
+
+.u-font-size-18 {
+  font-size: 18px;
+}
+
+.u-font-size-22 {
+  font-size: 22px;
+}
+
+.u-font-size-24 {
+  font-size: 24px;
+}
+
+.u-font-size-28 {
+  font-size: 28px;
+}
+
+.u-font-size-32 {
+  font-size: 32px;
+}
+
+.u-font-size-34 {
+  font-size: 34px;
+}
+
+.u-font-size-36 {
+  font-size: 36px;
+}
+
+.u-font-size-42 {
+  font-size: 42px;
+}
+
+.u-font-size-46 {
+  font-size: 46px;
+}
+
+.u-font-size-48 {
+  font-size: 48px;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-d-block {
+  display: block;
+}
+
+.u-d-inline {
+  display: inline;
+}
+
+.u-d-inline-block {
+  display: inline-block;
+}
+
+/* Object / Component – 再利用可能な最小単位のUIパーツ */
 /* --------------------------------------------------------------------------
    c-loader
+   ローディング演出。JSが html に .loaded を付与すると非表示になる。
    -------------------------------------------------------------------------- */
-
 .c-loader {
   position: fixed;
   top: 0;
@@ -139,7 +297,6 @@ html.loaded body {
     opacity: 0;
   }
 }
-
 @keyframes expand {
   0% {
     transform: scale(0);
@@ -153,7 +310,6 @@ html.loaded body {
     opacity: 0;
   }
 }
-
 html.loaded .c-loader {
   opacity: 0;
   visibility: hidden;
@@ -163,8 +319,8 @@ html.loaded .c-loader {
 
 /* --------------------------------------------------------------------------
    c-slider-pagination
+   汎用スライダーのページネーション
    -------------------------------------------------------------------------- */
-
 .c-slider-pagination {
   width: 100%;
   height: 44px;
@@ -197,34 +353,77 @@ html.loaded .c-loader {
 }
 
 /* --------------------------------------------------------------------------
-   c-works-slider panels
+   c-works-slider
+   作品スライダーの各パネル背景画像
    -------------------------------------------------------------------------- */
+.c-works-slider__panel--card {
+  background-image: url(../image/card.png);
+}
 
-.c-works-slider__panel--card     { background-image: url(../image/card.png); }
-.c-works-slider__panel--burger   { background-image: url(../image/burger.png); }
-.c-works-slider__panel--greenman { background-image: url(../image/GREENMAN.png); }
-.c-works-slider__panel--water    { background-image: url(../image/water.jpg); }
-.c-works-slider__panel--flyer    { background-image: url(../image/flyer.png); }
-.c-works-slider__panel--order    { background-image: url(../image/ORDER.png); }
-.c-works-slider__panel--dm       { background-image: url(../image/DM.png); }
-.c-works-slider__panel--perfume  { background-image: url(../image/perfume.png); }
-.c-works-slider__panel--narumi-01 { background-image: url(../image/narumi.jpg); }
-.c-works-slider__panel--narumi-02 { background-image: url(../image/narumi2.jpg); }
-.c-works-slider__panel--sakamoto { background-image: url(../image/sakamoto.png); }
-.c-works-slider__panel--kuzira   { background-image: url(../image/kuzira.png); }
-.c-works-slider__panel--milk-01  { background-image: url(../image/milk.png); }
-.c-works-slider__panel--milk-02  { background-image: url(../image/milk2.png); }
-.c-works-slider__panel--fan      { background-image: url(../image/fan.png); }
-.c-works-slider__panel--fuji     { background-image: url(../image/fuji.png); }
+.c-works-slider__panel--burger {
+  background-image: url(../image/burger.png);
+}
 
-/* ==========================================================================
-   Object / Project
-   ========================================================================== */
+.c-works-slider__panel--greenman {
+  background-image: url(../image/GREENMAN.png);
+}
 
+.c-works-slider__panel--water {
+  background-image: url(../image/water.jpg);
+}
+
+.c-works-slider__panel--flyer {
+  background-image: url(../image/flyer.png);
+}
+
+.c-works-slider__panel--order {
+  background-image: url(../image/ORDER.png);
+}
+
+.c-works-slider__panel--dm {
+  background-image: url(../image/DM.png);
+}
+
+.c-works-slider__panel--perfume {
+  background-image: url(../image/perfume.png);
+}
+
+.c-works-slider__panel--narumi-01 {
+  background-image: url(../image/narumi.jpg);
+}
+
+.c-works-slider__panel--narumi-02 {
+  background-image: url(../image/narumi2.jpg);
+}
+
+.c-works-slider__panel--sakamoto {
+  background-image: url(../image/sakamoto.png);
+}
+
+.c-works-slider__panel--kuzira {
+  background-image: url(../image/kuzira.png);
+}
+
+.c-works-slider__panel--milk-01 {
+  background-image: url(../image/milk.png);
+}
+
+.c-works-slider__panel--milk-02 {
+  background-image: url(../image/milk2.png);
+}
+
+.c-works-slider__panel--fan {
+  background-image: url(../image/fan.png);
+}
+
+.c-works-slider__panel--fuji {
+  background-image: url(../image/fuji.png);
+}
+
+/* Object / Project – ページ・セクション固有のコンポーネント */
 /* --------------------------------------------------------------------------
    p-top-page
    -------------------------------------------------------------------------- */
-
 .p-top-page__overlay {
   position: absolute;
   margin-left: 12.9%;
@@ -237,7 +436,6 @@ html.loaded .c-loader {
 /* --------------------------------------------------------------------------
    p-top-main
    -------------------------------------------------------------------------- */
-
 .p-top-main {
   position: relative;
   overflow: hidden;
@@ -260,7 +458,8 @@ html.loaded .c-loader {
 
 .p-top-main__title {
   font-size: 8rem;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   line-height: 1.5;
   margin: 4%;
   letter-spacing: 30%;
@@ -316,7 +515,8 @@ html.loaded .c-loader {
 
 .p-top-main__philosophy {
   mix-blend-mode: difference;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   text-align: center;
   line-height: 50px;
   letter-spacing: 3px;
@@ -350,7 +550,6 @@ html.loaded .c-loader {
 /* --------------------------------------------------------------------------
    p-course-card
    -------------------------------------------------------------------------- */
-
 .p-course-card {
   display: flex;
   flex-direction: column;
@@ -407,9 +606,8 @@ html.loaded .c-loader {
 }
 
 /* --------------------------------------------------------------------------
-   p-top-main / training + works-slider
+   p-top-main__training / works-slider
    -------------------------------------------------------------------------- */
-
 .p-top-main__training {
   text-align: center;
   padding: 10%;
@@ -478,9 +676,8 @@ html.loaded .c-loader {
 }
 
 /* --------------------------------------------------------------------------
-   p-top-main / misc
+   p-top-main – misc
    -------------------------------------------------------------------------- */
-
 .p-top-main__move-link--web img {
   height: 150px;
 }
@@ -508,7 +705,6 @@ html.loaded .c-loader {
    p-site-footer
    ※ 配置枠（position / overflow / padding-top）は l-footer が担う
    -------------------------------------------------------------------------- */
-
 .p-site-footer__content {
   justify-content: space-between;
   margin: 10% 30% 2% 30%;
@@ -576,89 +772,4 @@ html.loaded .c-loader {
   padding-top: 10%;
   color: #1a1a1a;
   font-size: 0.875rem;
-}
-
-/* ==========================================================================
-   Object / Utility + Responsive
-   ========================================================================== */
-
-.p-site-footer__instagram--sp,
-.u-hidden-pc {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .p-top-page__overlay {
-    display: none;
-  }
-
-  .p-top-main__cake {
-    position: absolute;
-    margin: 45% 0 10% 0;
-    width: 100%;
-    z-index: -100;
-  }
-
-  .p-top-main__title {
-    font-size: 5rem;
-    padding: 0 0 0 8%;
-  }
-
-  .p-top-main__welcome-text.u-vertical-text {
-    display: none;
-  }
-
-  .p-top-main__about {
-    margin-top: 20%;
-  }
-
-  .p-top-main__section-title {
-    font-size: 2rem;
-    line-height: 80px;
-    padding: 5px;
-    margin-bottom: 0;
-  }
-
-  .p-site-footer__instagram {
-    display: none;
-  }
-
-  .p-site-footer__instagram--sp,
-  .u-hidden-pc {
-    display: block;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .p-site-footer__instagram--sp img,
-  .u-hidden-pc img {
-    width: 30%;
-  }
-
-  /* #true-canvas はJS用にIDを残すが、表示制御はクラスで行う */
-  .p-site-footer__canvas {
-    display: none;
-  }
-}
-
-@media (max-width: 375px) {
-  .p-top-main__cake {
-    position: absolute;
-    padding-top: 15%;
-    width: 100%;
-    z-index: -100;
-    margin: 0% 10% 10% 0%;
-  }
-
-  .p-top-main__title {
-    font-size: 3.8rem;
-    padding: 35% 0 0 15%;
-    justify-content: center;
-  }
-
-  .p-site-footer__instagram--sp img,
-  .u-hidden-pc img {
-    width: 40%;
-  }
-}
+}/*# sourceMappingURL=style.css.map */
