@@ -1,10 +1,23 @@
+/* ==========================================================================
+   Foundation / Variables
+   ========================================================================== */
+
 :root {
-  --bg-color: #000;
-  --drop-color: #fff;
+  --color-bg:       #1a1a1a;
+  --color-text:     #eaeaea;
+  --color-sub-text: #c1c1c1;
+  --color-white:    #fff;
+  --color-black:    #000;
+
+  /* Loader（パレット変数にマッピング） */
+  --bg-color:   var(--color-black);
+  --drop-color: var(--color-white);
 }
 
-/* Base styles and resets */
-/* Header link */
+/* ==========================================================================
+   Foundation / Base
+   ========================================================================== */
+
 a {
   color: #eaeaea;
   text-decoration: none;
@@ -44,12 +57,38 @@ body {
   overflow: hidden;
 }
 
-.loaded html,
-.loaded body {
+/* JSがhtmlに.loadedを付与した後、bodyのスクロールを復元する */
+html.loaded body {
   overflow: auto;
 }
 
-/* Loader */
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.l-header {
+  position: relative;
+}
+
+.l-main {
+  position: relative;
+  width: 100%;
+}
+
+.l-footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 10%;
+}
+
+/* ==========================================================================
+   Object / Component
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   c-loader
+   -------------------------------------------------------------------------- */
+
 .c-loader {
   position: fixed;
   top: 0;
@@ -100,6 +139,7 @@ body {
     opacity: 0;
   }
 }
+
 @keyframes expand {
   0% {
     transform: scale(0);
@@ -113,14 +153,78 @@ body {
     opacity: 0;
   }
 }
-.loaded .c-loader {
+
+html.loaded .c-loader {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.5s ease;
 }
 
-/* Layout and page-specific styles */
+/* --------------------------------------------------------------------------
+   c-slider-pagination
+   -------------------------------------------------------------------------- */
+
+.c-slider-pagination {
+  width: 100%;
+  height: 44px;
+  margin: auto;
+  padding-bottom: 20%;
+  text-align: center;
+}
+
+.c-slider-pagination__button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  color: black;
+  background: rgba(255, 255, 255, 0.6666666667);
+  height: 44px;
+  margin: 10% 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-slider-pagination__button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.c-slider-pagination__button:active {
+  background: white;
+}
+
+/* --------------------------------------------------------------------------
+   c-works-slider panels
+   -------------------------------------------------------------------------- */
+
+.c-works-slider__panel--card     { background-image: url(../image/card.png); }
+.c-works-slider__panel--burger   { background-image: url(../image/burger.png); }
+.c-works-slider__panel--greenman { background-image: url(../image/GREENMAN.png); }
+.c-works-slider__panel--water    { background-image: url(../image/water.jpg); }
+.c-works-slider__panel--flyer    { background-image: url(../image/flyer.png); }
+.c-works-slider__panel--order    { background-image: url(../image/ORDER.png); }
+.c-works-slider__panel--dm       { background-image: url(../image/DM.png); }
+.c-works-slider__panel--perfume  { background-image: url(../image/perfume.png); }
+.c-works-slider__panel--narumi-01 { background-image: url(../image/narumi.jpg); }
+.c-works-slider__panel--narumi-02 { background-image: url(../image/narumi2.jpg); }
+.c-works-slider__panel--sakamoto { background-image: url(../image/sakamoto.png); }
+.c-works-slider__panel--kuzira   { background-image: url(../image/kuzira.png); }
+.c-works-slider__panel--milk-01  { background-image: url(../image/milk.png); }
+.c-works-slider__panel--milk-02  { background-image: url(../image/milk2.png); }
+.c-works-slider__panel--fan      { background-image: url(../image/fan.png); }
+.c-works-slider__panel--fuji     { background-image: url(../image/fuji.png); }
+
+/* ==========================================================================
+   Object / Project
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   p-top-page
+   -------------------------------------------------------------------------- */
+
 .p-top-page__overlay {
   position: absolute;
   margin-left: 12.9%;
@@ -129,6 +233,10 @@ body {
   background: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 40%, transparent 92%);
   z-index: -1;
 }
+
+/* --------------------------------------------------------------------------
+   p-top-main
+   -------------------------------------------------------------------------- */
 
 .p-top-main {
   position: relative;
@@ -145,8 +253,8 @@ body {
   z-index: -100;
 }
 
-#top-difference,
-#top_difference {
+/* #top-difference はJS/アンカー用にIDを残すが、スタイルはクラスで管理する */
+.p-top-main__title-wrap {
   position: relative;
 }
 
@@ -239,84 +347,10 @@ body {
   margin: 15% 0 5% 0;
 }
 
-/* Footer layout */
-footer,
-.l-footer.p-site-footer {
-  position: relative;
-  overflow: hidden;
-  padding-top: 10%;
-}
+/* --------------------------------------------------------------------------
+   p-course-card
+   -------------------------------------------------------------------------- */
 
-.p-site-footer__content {
-  justify-content: space-between;
-  margin: 10% 30% 2% 30%;
-}
-
-.p-site-footer__instagram {
-  position: absolute;
-  margin-top: -10%;
-  margin-left: 85%;
-}
-
-.p-site-footer__instagram img {
-  width: 60%;
-}
-
-.p-site-footer__logo {
-  position: absolute;
-  transform: translateX(100%);
-  padding-top: 5%;
-  text-align: center;
-}
-
-.p-site-footer__logo img {
-  width: 10%;
-}
-
-.p-site-footer__columns {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  justify-content: space-between;
-  font-size: 0.3rem;
-}
-
-.p-site-footer__column {
-  line-height: 3em;
-  text-align: center;
-}
-
-.p-site-footer__column p {
-  color: #1a1a1a;
-  line-height: 1rem;
-}
-
-.p-site-footer__meta p {
-  color: #1a1a1a;
-  text-align: center;
-  font-size: 0.875rem;
-  letter-spacing: 0.3rem;
-}
-
-.p-site-footer__academy-image {
-  position: absolute;
-  top: 8%;
-  width: 100%;
-}
-
-#target {
-  z-index: -1;
-}
-
-.p-site-footer__copyright {
-  font-family: Calisto MT;
-  text-align: center;
-  padding-top: 10%;
-  color: #1a1a1a;
-  font-size: 0.875rem;
-}
-
-/* Components: cards, buttons, slider, spinner, panels */
 .p-course-card {
   display: flex;
   flex-direction: column;
@@ -372,6 +406,10 @@ footer,
   margin-top: auto;
 }
 
+/* --------------------------------------------------------------------------
+   p-top-main / training + works-slider
+   -------------------------------------------------------------------------- */
+
 .p-top-main__training {
   text-align: center;
   padding: 10%;
@@ -391,7 +429,6 @@ footer,
   letter-spacing: 3px;
 }
 
-/* spinner / slider */
 .p-top-main__works-slider {
   width: 600px;
   height: 200px;
@@ -422,38 +459,12 @@ footer,
   background-position: 50% 50%;
 }
 
-/* pagination */
-.c-slider-pagination,
 .p-top-main__pagination {
   width: 100%;
   height: 44px;
-  margin-top: 20%;
   margin: auto;
   padding-bottom: 20%;
   text-align: center;
-}
-
-.c-slider-pagination__button {
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  width: 44px;
-  color: black;
-  background: rgba(255, 255, 255, 0.6666666667);
-  height: 44px;
-  margin: 10% 2%;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  border-radius: 100%;
-  transition: all 0.2s ease-in-out;
-}
-
-.c-slider-pagination__button:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.c-slider-pagination__button:active {
-  background: white;
 }
 
 .p-top-main__fade {
@@ -466,72 +477,10 @@ footer,
   transition: all 0.5s ease-in-out;
 }
 
-/* panel images */
-.c-works-slider__panel--card {
-  background-image: url(../image/card.png);
-}
+/* --------------------------------------------------------------------------
+   p-top-main / misc
+   -------------------------------------------------------------------------- */
 
-.c-works-slider__panel--burger {
-  background-image: url(../image/burger.png);
-}
-
-.c-works-slider__panel--greenman {
-  background-image: url(../image/GREENMAN.png);
-}
-
-.c-works-slider__panel--water {
-  background-image: url(../image/water.jpg);
-}
-
-.c-works-slider__panel--flyer {
-  background-image: url(../image/flyer.png);
-}
-
-.c-works-slider__panel--order {
-  background-image: url(../image/ORDER.png);
-}
-
-.c-works-slider__panel--dm {
-  background-image: url(../image/DM.png);
-}
-
-.c-works-slider__panel--perfume {
-  background-image: url(../image/perfume.png);
-}
-
-.c-works-slider__panel--narumi-01 {
-  background-image: url(../image/narumi.jpg);
-}
-
-.c-works-slider__panel--narumi-02 {
-  background-image: url(../image/narumi2.jpg);
-}
-
-.c-works-slider__panel--sakamoto {
-  background-image: url(../image/sakamoto.png);
-}
-
-.c-works-slider__panel--kuzira {
-  background-image: url(../image/kuzira.png);
-}
-
-.c-works-slider__panel--milk-01 {
-  background-image: url(../image/milk.png);
-}
-
-.c-works-slider__panel--milk-02 {
-  background-image: url(../image/milk2.png);
-}
-
-.c-works-slider__panel--fan {
-  background-image: url(../image/fan.png);
-}
-
-.c-works-slider__panel--fuji {
-  background-image: url(../image/fuji.png);
-}
-
-/* Responsive and utility classes */
 .p-top-main__move-link--web img {
   height: 150px;
 }
@@ -555,6 +504,84 @@ footer,
   width: 2.5rem;
 }
 
+/* --------------------------------------------------------------------------
+   p-site-footer
+   ※ 配置枠（position / overflow / padding-top）は l-footer が担う
+   -------------------------------------------------------------------------- */
+
+.p-site-footer__content {
+  justify-content: space-between;
+  margin: 10% 30% 2% 30%;
+}
+
+.p-site-footer__instagram {
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 85%;
+}
+
+.p-site-footer__instagram img {
+  width: 60%;
+}
+
+.p-site-footer__logo {
+  position: absolute;
+  transform: translateX(100%);
+  padding-top: 5%;
+  text-align: center;
+}
+
+.p-site-footer__logo img {
+  width: 10%;
+}
+
+.p-site-footer__columns {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  font-size: 0.3rem;
+}
+
+.p-site-footer__column {
+  line-height: 3em;
+  text-align: center;
+}
+
+.p-site-footer__column p {
+  color: #1a1a1a;
+  line-height: 1rem;
+}
+
+.p-site-footer__meta p {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 0.875rem;
+  letter-spacing: 0.3rem;
+}
+
+.p-site-footer__academy-image {
+  position: absolute;
+  top: 8%;
+  width: 100%;
+}
+
+/* #target（canvas）はJS用にIDを残すが、z-indexは親クラスで管理する */
+.p-site-footer__canvas {
+  z-index: -1;
+}
+
+.p-site-footer__copyright {
+  font-family: Calisto MT;
+  text-align: center;
+  padding-top: 10%;
+  color: #1a1a1a;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Object / Utility + Responsive
+   ========================================================================== */
+
 .p-site-footer__instagram--sp,
 .u-hidden-pc {
   display: none;
@@ -564,31 +591,38 @@ footer,
   .p-top-page__overlay {
     display: none;
   }
+
   .p-top-main__cake {
     position: absolute;
     margin: 45% 0 10% 0;
     width: 100%;
     z-index: -100;
   }
+
   .p-top-main__title {
     font-size: 5rem;
     padding: 0 0 0 8%;
   }
+
   .p-top-main__welcome-text.u-vertical-text {
     display: none;
   }
+
   .p-top-main__about {
     margin-top: 20%;
   }
+
   .p-top-main__section-title {
     font-size: 2rem;
     line-height: 80px;
     padding: 5px;
     margin-bottom: 0;
   }
+
   .p-site-footer__instagram {
     display: none;
   }
+
   .p-site-footer__instagram--sp,
   .u-hidden-pc {
     display: block;
@@ -596,14 +630,18 @@ footer,
     width: 50%;
     margin: 0 auto;
   }
+
   .p-site-footer__instagram--sp img,
   .u-hidden-pc img {
     width: 30%;
   }
-  #true-canvas {
+
+  /* #true-canvas はJS用にIDを残すが、表示制御はクラスで行う */
+  .p-site-footer__canvas {
     display: none;
   }
 }
+
 @media (max-width: 375px) {
   .p-top-main__cake {
     position: absolute;
@@ -612,15 +650,15 @@ footer,
     z-index: -100;
     margin: 0% 10% 10% 0%;
   }
+
   .p-top-main__title {
     font-size: 3.8rem;
     padding: 35% 0 0 15%;
     justify-content: center;
   }
+
   .p-site-footer__instagram--sp img,
   .u-hidden-pc img {
     width: 40%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

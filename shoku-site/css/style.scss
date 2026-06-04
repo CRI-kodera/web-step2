@@ -1,6 +1,7 @@
-// Main Sass entry — imports partials
-@import "scss/_variables.scss";
-@import "scss/_base.scss";
-@import "scss/_layout.scss";
-@import "scss/_components.scss";
-@import "scss/_responsive.scss";
+// Main Sass entry — imports partials in FLOCSS layer order
+@import "scss/_variables.scss";   // Foundation: variables
+@import "scss/_base.scss";        // Foundation: base/reset
+@import "scss/layout/_layout.scss"; // Layout
+@import "scss/_components.scss";  // Object/Component
+@import "scss/object/project.scss"; // Object/Project
+@import "scss/_responsive.scss";  // Responsive + Utility defaults
