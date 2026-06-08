@@ -1,0 +1,19 @@
+/* ============================================
+   Foundation - Variables (カラーパレット)
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-bg: #1a1a1a;
+  --color-bg-dark: #000;
+  --color-text: #eaeaea;
+  --color-text-sub: #c1c1c1;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #8e8e8e;
+  --color-dark-red: #4d0000;
+
+  /* Legacy (互換性) */
+  --bg-color: #000;
+  --drop-color: #fff;
+}

@@ -1,0 +1,35 @@
+/* ============================================
+   Object / Component - Slider Pagination
+   ============================================ */
+
+.c-slider-pagination {
+  width: 100%;
+  height: 44px;
+  margin-top: 20%;
+  margin: auto;
+  padding-bottom: 20%;
+  text-align: center;
+}
+
+.c-slider-pagination__button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  color: black;
+  background: rgba(255, 255, 255, 0.6666666667);
+  height: 44px;
+  margin: 10% 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-slider-pagination__button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.c-slider-pagination__button:active {
+  background: white;
+}

@@ -1,0 +1,58 @@
+/* ============================================
+   Object / Project - Course Card
+   ============================================ */
+
+.p-course-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-course-card--web {
+  padding: 4% 3.5% 5% 3.5%;
+  color: var(--color-text);
+  background-color: var(--color-gray);
+}
+
+.p-course-card--movie {
+  padding: 4% 3.5% 5% 3.5%;
+  color: var(--color-text);
+  background-color: var(--color-dark-red);
+}
+
+.p-course-card__body {
+  width: 100%;
+  text-align: left;
+  line-height: 5;
+  outline: 0.02rem solid var(--color-white);
+  outline-offset: 0.35rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-course-card__description {
+  line-height: 2.3;
+  letter-spacing: 0.1rem;
+  padding: 0 0 30px 30px;
+}
+
+.p-course-card__title {
+  text-align: center;
+  padding: 10% 0 8% 0;
+}
+
+.p-course-card__summary {
+  line-height: 2.3;
+  letter-spacing: 0.1rem;
+  padding: 0 0 30px 30px;
+}
+
+.p-course-card__body a {
+  margin: auto;
+}
+
+.p-course-card__link {
+  text-align: right;
+  padding: 40px 20px;
+  margin-top: auto;
+}

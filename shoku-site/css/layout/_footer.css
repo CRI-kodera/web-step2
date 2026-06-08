@@ -1,0 +1,10 @@
+/* ============================================
+   Layout - Footer
+   ============================================ */
+
+.l-footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 10%;
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+/* ============================================
+   Foundation - Base Styles
+   ============================================ */
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.25rem;
+  color: var(--color-white);
+}
+
+h2 {
+  color: var(--color-white);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 10%;
+}

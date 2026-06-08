@@ -1,0 +1,67 @@
+/* ============================================
+   Object / Component - Works Slider Panels
+   ============================================ */
+
+.c-works-slider__panel--card {
+  background-image: url(../image/card.png);
+}
+
+.c-works-slider__panel--burger {
+  background-image: url(../image/burger.png);
+}
+
+.c-works-slider__panel--greenman {
+  background-image: url(../image/GREENMAN.png);
+}
+
+.c-works-slider__panel--water {
+  background-image: url(../image/water.jpg);
+}
+
+.c-works-slider__panel--flyer {
+  background-image: url(../image/flyer.png);
+}
+
+.c-works-slider__panel--order {
+  background-image: url(../image/ORDER.png);
+}
+
+.c-works-slider__panel--dm {
+  background-image: url(../image/DM.png);
+}
+
+.c-works-slider__panel--perfume {
+  background-image: url(../image/perfume.png);
+}
+
+.c-works-slider__panel--narumi-01 {
+  background-image: url(../image/narumi.jpg);
+}
+
+.c-works-slider__panel--narumi-02 {
+  background-image: url(../image/narumi2.jpg);
+}
+
+.c-works-slider__panel--sakamoto {
+  background-image: url(../image/sakamoto.png);
+}
+
+.c-works-slider__panel--kuzira {
+  background-image: url(../image/kuzira.png);
+}
+
+.c-works-slider__panel--milk-01 {
+  background-image: url(../image/milk.png);
+}
+
+.c-works-slider__panel--milk-02 {
+  background-image: url(../image/milk2.png);
+}
+
+.c-works-slider__panel--fan {
+  background-image: url(../image/fan.png);
+}
+
+.c-works-slider__panel--fuji {
+  background-image: url(../image/fuji.png);
+}

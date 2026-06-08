@@ -1,0 +1,30 @@
+/* ============================================
+   Object / Utility
+   ============================================ */
+
+.u-vertical-text {
+  writing-mode: vertical-rl;
+}
+
+.u-hidden-pc {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .u-hidden-pc {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .u-hidden-pc img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 375px) {
+  .u-hidden-pc img {
+    width: 40%;
+  }
+}

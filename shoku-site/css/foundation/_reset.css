@@ -1,0 +1,28 @@
+/* ============================================
+   Foundation - Reset
+   ============================================ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* デフォルトはスクロール非表示 */
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  background-color: var(--color-bg);
+  font-family: Shippori Mincho;
+  margin: 0;
+}
+
+/* スクロール可能な状態 */
+body.loaded {
+  overflow: auto;
+}
