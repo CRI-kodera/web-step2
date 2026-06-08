@@ -1,0 +1,136 @@
+/* Object / Component – 再利用可能な最小単位のUIパーツ */
+
+/* --------------------------------------------------------------------------
+   c-loader
+   ローディング演出。JSが html に .loaded を付与すると非表示になる。
+   -------------------------------------------------------------------------- */
+
+.c-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.c-loader__drop {
+  width: 10px;
+  height: 10px;
+  background: var(--drop-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  animation: fall 0.8s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+.c-loader__ripple {
+  width: 20px;
+  height: 20px;
+  background: var(--drop-color);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  animation: expand 1.5s ease-out 0.8s forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: scaleY(1.2);
+  }
+  90% {
+    top: 50%;
+    transform: scaleY(1);
+  }
+  100% {
+    top: 50%;
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+html.loaded .c-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* --------------------------------------------------------------------------
+   c-slider-pagination
+   汎用スライダーのページネーション
+   -------------------------------------------------------------------------- */
+
+.c-slider-pagination {
+  width: 100%;
+  height: 44px;
+  margin: auto;
+  padding-bottom: 20%;
+  text-align: center;
+}
+
+.c-slider-pagination__button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  color: black;
+  background: rgba(255, 255, 255, 0.6666666667);
+  height: 44px;
+  margin: 10% 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-slider-pagination__button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.c-slider-pagination__button:active {
+  background: white;
+}
+
+/* --------------------------------------------------------------------------
+   c-works-slider
+   作品スライダーの各パネル背景画像
+   -------------------------------------------------------------------------- */
+
+.c-works-slider__panel--card     { background-image: url(../image/card.png); }
+.c-works-slider__panel--burger   { background-image: url(../image/burger.png); }
+.c-works-slider__panel--greenman { background-image: url(../image/GREENMAN.png); }
+.c-works-slider__panel--water    { background-image: url(../image/water.jpg); }
+.c-works-slider__panel--flyer    { background-image: url(../image/flyer.png); }
+.c-works-slider__panel--order    { background-image: url(../image/ORDER.png); }
+.c-works-slider__panel--dm       { background-image: url(../image/DM.png); }
+.c-works-slider__panel--perfume  { background-image: url(../image/perfume.png); }
+.c-works-slider__panel--narumi-01 { background-image: url(../image/narumi.jpg); }
+.c-works-slider__panel--narumi-02 { background-image: url(../image/narumi2.jpg); }
+.c-works-slider__panel--sakamoto { background-image: url(../image/sakamoto.png); }
+.c-works-slider__panel--kuzira   { background-image: url(../image/kuzira.png); }
+.c-works-slider__panel--milk-01  { background-image: url(../image/milk.png); }
+.c-works-slider__panel--milk-02  { background-image: url(../image/milk2.png); }
+.c-works-slider__panel--fan      { background-image: url(../image/fan.png); }
+.c-works-slider__panel--fuji     { background-image: url(../image/fuji.png); }

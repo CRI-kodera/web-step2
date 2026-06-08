@@ -1,0 +1,12 @@
+// Variables — color palette (Foundation layer)
+:root {
+  --color-bg:       #1a1a1a;
+  --color-text:     #eaeaea;
+  --color-sub-text: #c1c1c1;
+  --color-white:    #fff;
+  --color-black:    #000;
+
+  // Loader（パレット変数にマッピング）
+  --bg-color:   var(--color-black);
+  --drop-color: var(--color-white);
+}

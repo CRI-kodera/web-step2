@@ -1,0 +1,22 @@
+/* Layout – Page skeleton only (no project-specific styles here) */
+
+/*
+  役割: ページの主要な骨格（ヘッダー、フッター、メインコンテンツエリア）を定義する。
+  命名: クラス名頭に「l-」を付ける。
+  ※ 見た目の装飾は p- (Project) に持たせ、配置の枠のみをここに書く。
+*/
+
+.l-header {
+  position: relative;
+}
+
+.l-main {
+  position: relative;
+  width: 100%;
+}
+
+.l-footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 10%;
+}

@@ -1,0 +1,45 @@
+/* Foundation – Base styles only (no component styles here) */
+
+a {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  background-color: #1a1a1a;
+  font-family: Shippori Mincho;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+}
+
+p {
+  font-size: 1rem;
+  color: #eaeaea;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* JSがhtmlに.loadedを付与した後、bodyのスクロールを復元する */
+html.loaded body {
+  overflow: auto;
+}
