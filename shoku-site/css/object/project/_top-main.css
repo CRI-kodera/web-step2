@@ -91,8 +91,6 @@
 }
 
 .p-top-main__philosophy {
-  mix-blend-mode: difference;
-  background-clip: text;
   text-align: center;
   line-height: 50px;
   letter-spacing: 3px;
@@ -123,34 +121,41 @@
   margin: 15% 0 5% 0;
 }
 
-.p-top-main__works-slider {
-  width: 600px;
-  height: 200px;
+.p-top-main__courses {
   display: flex;
-  justify-content: center;
+  gap: 1%;
+  margin: 0 3%;
+  align-items: stretch;
+}
+
+.p-top-main__works-slider {
+  width: 100%;
+  margin: 68px auto;
+  display: flex;
   align-items: center;
+  overflow: hidden;
   perspective: 700px;
   perspective-origin: center;
-  margin: auto;
 }
 
 .p-top-main__spinner {
+  display: flex;
+  animation: slide-flow 40s infinite linear 1s both;
   transform-style: preserve-3d;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotateY(calc(var(--ang) * 1deg)) translateY(0px);
-  transition: all 0.5s ease-in-out;
 }
 
 .p-top-main__panel {
   border-radius: 5px;
   width: 100px;
   height: 100px;
-  position: absolute;
+  position: relative;
   background-size: cover;
   background-position: 50% 50%;
+  margin: 0 10px;
+  flex-shrink: 0;
 }
 
 .p-top-main__fade {
@@ -161,6 +166,30 @@
   position: absolute;
   transform: rotateY(calc(var(--ang) * -1deg)) translateZ(0px);
   transition: all 0.5s ease-in-out;
+}
+
+.p-top-main__voice {
+  position: relative;
+}
+
+.p-top-main__voice-title {
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  white-space: nowrap;
+  opacity: 0.3;
+  color: var(--color-text-sub);
+  font-size: 7rem;
+  letter-spacing: 15px;
+  margin-top: -35%;
+  margin-left: 0%;
+  left: 0;
+}
+
+.p-top-main__works-title {
+  text-align: center;
+  font-size: 3.125rem;
+  margin: 20% 0 10% 0;
 }
 
 .p-top-main__training {
@@ -179,8 +208,48 @@
   letter-spacing: 3px;
 }
 
-.p-top-main__move-link--web img {
-  height: 150px;
+.p-top-main__contact {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.p-top-main__contact-title {
+  font-size: 3.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.p-top-main__contact-link-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.p-top-main__contact-link {
+  display: inline-block;
+  text-align: center;
+}
+
+.p-top-main__move-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 0 auto 5rem;
+}
+
+.p-top-main__move-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-top-main__move-link img {
+  display: block;
+  width: 220px;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
 }
 
 .p-top-main__map {
@@ -200,6 +269,16 @@
 
 .p-top-main__page-top img {
   width: 2.5rem;
+}
+
+/* Animation */
+@keyframes slide-flow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Responsive */

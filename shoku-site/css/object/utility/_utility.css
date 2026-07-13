@@ -10,6 +10,10 @@
   display: none;
 }
 
+.is-visible {
+  opacity: 1 !important;
+}
+
 @media screen and (max-width: 767px) {
   .u-hidden-pc {
     display: block;

@@ -5,6 +5,8 @@
 .p-course-card {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .p-course-card--web {
