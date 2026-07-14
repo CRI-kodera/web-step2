@@ -1,7 +1,14 @@
 /* ============================================
    Object / Project - Top Main
    ============================================ */
-
+.p-top-page__accent-panel {
+  position: absolute;
+  margin-left: 12.9%;
+  width: 18%;
+  height: 317.8%;
+  background: #eaeaea;
+  z-index: -1;
+}
 .p-top-main {
   position: relative;
   overflow: hidden;
@@ -10,7 +17,7 @@
   width: 100%;
 }
 
-.p-top-main__overlay {
+.p-top-page__overlay {
   position: absolute;
   margin-left: 12.9%;
   width: 18%;
@@ -181,7 +188,7 @@
   color: var(--color-text-sub);
   font-size: 7rem;
   letter-spacing: 15px;
-  margin-top: -35%;
+  margin-top: -50%;
   margin-left: 0%;
   left: 0;
 }

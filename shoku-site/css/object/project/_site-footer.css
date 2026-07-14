@@ -3,7 +3,7 @@
    ============================================ */
 
 .p-site-footer {
-  /* フッターコンテンツのスタイル */
+  display: block;
 }
 
 .p-site-footer__content {
