@@ -9,7 +9,7 @@
 .p-site-footer__content {
   justify-content: space-between;
   margin: 10% 30% 2% 30%;
-  background-color: #fff;
+  background-color: #1a1a1a;
 }
 
 .p-site-footer__instagram {
@@ -35,14 +35,19 @@
 
 .p-site-footer__columns {
   display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-  font-size: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.95rem;
+  padding: 1.5rem 0;
 }
 
 .p-site-footer__column {
-  line-height: 3em;
-  text-align: center;
+  flex: 1 1 240px;
+  max-width: 320px;
+  line-height: 1.8;
+  text-align: left;
+  z-index: 2;
 }
 
 .p-site-footer__column p {
@@ -65,14 +70,13 @@
 
 .p-site-footer__target {
   z-index: -1;
-  background-color: #fff;
 }
 
 .p-site-footer__copyright {
   font-family: Calisto MT;
   text-align: center;
   padding-top: 10%;
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: 0.875rem;
 }
 
@@ -81,7 +85,8 @@
 }
 
 .p-site-footer__true-canvas {
-  display: none;
+  position: absolute;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {

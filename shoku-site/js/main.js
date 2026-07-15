@@ -117,15 +117,27 @@ revealOnScroll();
 //作品紹介
 
 var ang = 0;
+const sliderSpinner = document.querySelector(".p-top-main__spinner");
+const sliderFade = document.querySelector(".p-top-main__fade");
 
-$("#slider-prev").click(function () {
+const setSliderAngle = () => {
+  if (sliderSpinner) {
+    sliderSpinner.style.setProperty("--ang", ang);
+  }
+
+  if (sliderFade) {
+    sliderFade.style.setProperty("--ang", ang);
+  }
+};
+
+$("#slider-prev").on("click", function () {
   ang = ang + 22.5;
-  $("*").css("--ang", ang);
+  setSliderAngle();
 });
 
-$("#slider-next").click(function () {
+$("#slider-next").on("click", function () {
   ang = ang - 22.5;
-  $("*").css("--ang", ang);
+  setSliderAngle();
 });
 
 //canvas
