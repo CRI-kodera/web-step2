@@ -8,7 +8,12 @@
   margin-left: 12.9%;
   width: 18%;
   height: 100%;
-  background: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 40%, transparent 92%);
+  background: linear-gradient(
+    to bottom,
+    #eaeaea 0%,
+    #eaeaea 40%,
+    transparent 92%
+  );
   z-index: -1;
 }
 
@@ -38,7 +43,7 @@
 .p-top-main__title {
   font-size: 8rem;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   line-height: 1.5;
   margin: 4%;
   letter-spacing: 30%;
@@ -95,7 +100,7 @@
 .p-top-main__philosophy {
   mix-blend-mode: difference;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   text-align: center;
   line-height: 50px;
   letter-spacing: 3px;
@@ -194,9 +199,6 @@
 
 .p-top-main__training-title {
   padding-bottom: 0;
-}
-
-.p-top-main__training .p-top-main__training-title {
   font-size: 3.125rem;
 }
 
@@ -266,8 +268,7 @@
   margin: 0 auto;
 }
 
-.p-top-main__map iframe,
-.p-top-main__map .p-top-main__map-frame {
+.p-top-main__map-frame {
   border: 0;
 }
 
@@ -351,4 +352,4 @@
   padding-top: 10%;
   color: #1a1a1a;
   font-size: 0.875rem;
-}/*# sourceMappingURL=project.css.map */
+} /*# sourceMappingURL=project.css.map */

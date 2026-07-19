@@ -39,18 +39,10 @@
               <a class="c-hamburger__link" href="index.html">top</a>
             </li>
             <li class="c-hamburger__item">
-              <a
-                class="c-hamburger__link"
-                href="#"
-                >web class</a
-              >
+              <a class="c-hamburger__link" href="#">web class</a>
             </li>
             <li class="c-hamburger__item">
-              <a
-                class="c-hamburger__link"
-                href="#"
-                >movie class</a
-              >
+              <a class="c-hamburger__link" href="#">movie class</a>
             </li>
           </ul>
         </div>
@@ -59,18 +51,10 @@
       <nav class="c-global-nav p-site-header__nav">
         <ul class="c-global-nav__list">
           <li class="c-global-nav__item">
-            <a
-              class="c-global-nav__link"
-              href="#"
-              >web class</a
-            >
+            <a class="c-global-nav__link" href="#">web class</a>
           </li>
           <li class="c-global-nav__item">
-            <a
-              class="c-global-nav__link"
-              href="#"
-              >movie class</a
-            >
+            <a class="c-global-nav__link" href="#">movie class</a>
           </li>
           <li class="c-global-nav__item">
             <a class="c-global-nav__link" href="#">contact</a>
@@ -81,7 +65,7 @@
 
     <main class="l-main p-top-main">
       <figure class="p-top-main__decoration">
-        <img src="image/circle.png" alt="装飾の円" class="p-top-main__cake" />
+        <img src="image/circle.png" alt="" class="p-top-main__cake" />
       </figure>
       <div
         id="top-difference"
@@ -107,7 +91,7 @@
         </h2>
       </div>
 
-      <div class="p-top-main__about">
+      <section class="p-top-main__about">
         <h2 class="p-top-main__section-title">はじめまして、私です。</h2>
         <p class="p-top-main__philosophy">
           友達と全力で遊んで、全力で誰かのために動く——<br />
@@ -124,12 +108,12 @@
           <br />
           そんな人間が、ここにいます。
         </p>
-      </div>
-      <div class="p-top-main__mission-visual">
+      </section>
+      <section class="p-top-main__mission-visual">
         <h2 class="p-top-main__mission-text">Who I am</h2>
-      </div>
+      </section>
       <h2 class="p-top-main__course-heading">Introduction</h2>
-      <div class="p-top-main__courses">
+      <section class="p-top-main__courses">
         <div class="p-course-card p-course-card--web">
           <div class="p-course-card__body">
             <h2 class="p-course-card__title">about me</h2>
@@ -172,8 +156,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="p-top-main__training">
+      </section>
+      <section class="p-top-main__training">
         <h2 class="p-top-main__training-title">Manifesto</h2>
         <p>
           みんな違うから、面白い。<br />
@@ -185,11 +169,11 @@
           見た人がくすっと笑えて——<br />
           でも芯がある。そんな作品を届けたい。
         </p>
-      </div>
+      </section>
 
-      <div class="p-top-main__voice">
+      <section class="p-top-main__voice">
         <h2 class="p-top-main__voice-title">80/20/Style</h2>
-      </div>
+      </section>
       <h2 class="p-top-main__works-title">Works</h2>
       <div class="p-top-main__works-slider">
         <div class="p-top-main__spinner">
@@ -249,6 +233,7 @@
           type="button"
           id="slider-prev"
           class="c-slider-pagination__button"
+          aria-label="前のスライド"
         >
           &#8592;
         </button>
@@ -256,14 +241,15 @@
           type="button"
           id="slider-next"
           class="c-slider-pagination__button"
+          aria-label="次のスライド"
         >
           &#8594;
         </button>
       </div>
 
-      <div class="p-top-main__contact">
+      <section class="p-top-main__contact">
         <h2 class="p-top-main__contact-title">Contact</h2>
-      </div>
+      </section>
       <div class="p-top-main__contact-link-wrap">
         <a href="contact.html" class="c-button-link p-top-main__contact-link">
           お問い合わせ</a
@@ -282,7 +268,7 @@
           ><img src="image/movie_button.png" alt="Movieクラスページへ移動"
         /></a>
       </div>
-      <div class="p-top-main__map">
+      <section class="p-top-main__map">
         <!-- <iframe
           class="p-top-main__map-frame"
           title="学校所在地マップ"
@@ -293,11 +279,13 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe> -->
-      </div>
+      </section>
       <div class="c-page-top p-top-main__page-top">
         <a href="#top"><img src="image/gotop.png" alt="ページ上部へ戻る" /></a>
       </div>
-      <div class="p-site-footer__instagram--sp u-hidden-pc" aria-hidden="true">
+      <div
+        class="p-site-footer__instagram p-site-footer__instagram--sp u-hidden-pc"
+      >
         <a
           href="https://www.instagram.com/aiwa.kunren"
           target="_blank"
