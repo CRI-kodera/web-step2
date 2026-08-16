@@ -371,6 +371,25 @@
     width: 55%;
     margin-left: 40%;
   }
+  .p-top-main__about {
+    margin-top: 120vh;
+    padding: 0 5vw;
+  }
+
+  .p-top-main__section-title {
+    font-size: clamp(2.2rem, 2.8vw, 3.125rem);
+    line-height: 1.4;
+    padding-top: 40px;
+  }
+
+  .p-top-main__philosophy {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    line-height: 2;
+    letter-spacing: 0.08em;
+  }
+}
 
   .p-top-main__title {
     font-size: 6.5rem;
@@ -389,7 +408,7 @@
   }
 
   .p-top-main__mission-text {
-    margin-top: -50%;
+    margin-top: -35%;
     font-size: 5rem;
     right: 4%;
   }
@@ -403,7 +422,6 @@
     flex: 1 1 280px;
     min-width: 280px;
   }
-}
 
 @media screen and (max-width: 1200px) {
   .p-top-main__cake {

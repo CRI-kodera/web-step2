@@ -110,6 +110,15 @@
     text-align: center;
   }
 }
+.p-site-footer__canvas{
+  position: absolute;
+  left: 25%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width: 1200px) {
   .p-site-footer__content {
