@@ -389,17 +389,15 @@
     line-height: 2;
     letter-spacing: 0.08em;
   }
-}
-
-  .p-top-main__title {
+    .p-top-main__title {
     font-size: 6.5rem;
     padding-left: 12%;
     line-height: 1.2;
   }
 
   .p-top-main__welcome {
-    right: 21%;
-    top: 8rem;
+    right: 17%;
+    top: 9rem;
     max-width: 360px;
   }
 
@@ -422,6 +420,7 @@
     flex: 1 1 280px;
     min-width: 280px;
   }
+}
 
 @media screen and (max-width: 1200px) {
   .p-top-main__cake {
