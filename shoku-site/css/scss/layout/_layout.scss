@@ -8,15 +8,37 @@
 
 .l-header {
   position: relative;
+  width: 100%;
 }
 
 .l-main {
   position: relative;
   width: 100%;
+  overflow: hidden;
+}
+
+.l-container {
+  width: min(
+    calc(100% - (var(--layout-gutter) * 2)),
+    var(--layout-content-width)
+  );
+  margin-inline: auto;
+}
+
+.l-section {
+  margin-block-start: var(--space-section);
 }
 
 .l-footer {
   position: relative;
   overflow: hidden;
-  padding-top: 10%;
+  padding-top: var(--space-section);
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --layout-gutter: 20px;
+    --space-section: 80px;
+    --space-heading: 32px;
+  }
 }
