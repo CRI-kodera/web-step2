@@ -73,3 +73,35 @@
 .u-d-inline-block {
     display: inline-block;
 }
+
+// 書字方向・表示制御・アニメーション用フラグ
+.u-vertical-text {
+  writing-mode: vertical-rl;
+}
+
+.u-hidden-pc {
+  display: none;
+}
+
+.is-visible {
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .u-hidden-pc {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .u-hidden-pc img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 375px) {
+  .u-hidden-pc img {
+    width: 40%;
+  }
+}
