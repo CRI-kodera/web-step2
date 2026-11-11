@@ -149,7 +149,7 @@ if (element) {
 
   context.beginPath();
 
-  context.arc(950, 650, 650, (0 * Math.PI) / 180, (360 * Math.PI) / 180, false);
+  context.arc(950, 740, 700, (0 * Math.PI) / 180, (360 * Math.PI) / 180, false);
   context.fillStyle = "rgb(234,234,234)";
   context.fill();
 }

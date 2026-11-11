@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build:css": "sass css/style.scss css/style.css --style=expanded",
+    "watch:css": "sass --watch css/style.scss:css/style.css --style=expanded",
     "build": "npm run build:css"
   },
   "devDependencies": {

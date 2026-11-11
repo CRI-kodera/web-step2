@@ -79,9 +79,39 @@
 
 .p-top-main__welcome {
   position: absolute;
-  right: 3%;
 }
 
+.p-top-main__title {
+  font-size: 6.5rem;
+  padding-left: 12%;
+  line-height: 1.2;
+}
+
+.p-top-main__welcome {
+  right: 5%;
+  top: 20rem;
+  max-width: 360px;
+}
+
+.p-top-main__welcome-text {
+  font-size: 2rem;
+}
+
+.p-top-main__mission-text {
+  margin-top: -35%;
+  font-size: 5rem;
+  right: 4%;
+}
+
+.p-top-main__courses {
+  gap: 2%;
+  margin: 0 2%;
+}
+
+.p-course-card {
+  flex: 1 1 280px;
+  min-width: 280px;
+}
 .p-top-main__welcome-text {
   margin-top: 45%;
   line-height: 200%;
@@ -558,6 +588,11 @@
     margin-top: 120vh;
     padding: 0 5vw;
   }
+  .p-top-main__welcome {
+    right: 20%;
+    top: 7rem;
+    max-width: 360px;
+  }
 
   .p-top-main__section-title {
     font-size: clamp(2.2rem, 2.8vw, 3.125rem);
@@ -590,38 +625,14 @@
     padding-top: 5%;
     text-align: center;
   }
-}
+  .p-site-footer__true-canvas {
+    display: none;
+  }
 
-.p-top-main__title {
-  font-size: 6.5rem;
-  padding-left: 12%;
-  line-height: 1.2;
-}
-
-.p-top-main__welcome {
-  right: 21%;
-  top: 8rem;
-  max-width: 360px;
-}
-
-.p-top-main__welcome-text {
-  font-size: 2rem;
-}
-
-.p-top-main__mission-text {
-  margin-top: -35%;
-  font-size: 5rem;
-  right: 4%;
-}
-
-.p-top-main__courses {
-  gap: 2%;
-  margin: 0 2%;
-}
-
-.p-course-card {
-  flex: 1 1 280px;
-  min-width: 280px;
+  .p-site-footer__column p {
+    color: #fff;
+    line-height: 1rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -636,19 +647,9 @@
   }
 
   .p-top-main__welcome {
-    position: static;
-    right: auto;
-    left: 6%;
-    top: auto;
-    max-width: 320px;
-  }
-
-  .p-top-main__mission-text {
-    position: static;
-    transform: none;
-    writing-mode: horizontal-tb;
-    font-size: 3.8rem;
-    margin: 0 auto 2rem;
+    right: 20%;
+    top: 7rem;
+    max-width: 360px;
   }
 
   .p-top-main__courses {
@@ -658,37 +659,66 @@
   .p-site-footer__content {
     margin: 10% 10% 2% 10%;
   }
+  .p-top-main__mission-text {
+    font-size: 4rem;
+    top: 10px;
+  }
 
-  .p-site-footer__columns {
-    flex-direction: column;
-    gap: 1rem;
+  .p-site-footer__true-canvas {
+    display: none;
   }
 }
 
 @media screen and (max-width: 767px) {
   /* 移植元のタイポをそのまま維持（本来は .p-top-page__overlay が対象と思われる） */
+  .p-top-page__accent-panel {
+    display: none;
+  }
+  .p-top-page__overlay {
+    display: none;
+  }
   .p-top-main__overlay {
     display: none;
   }
 
   .p-top-main__cake {
     position: absolute;
-    margin: 45% 0 10% 0;
+    margin: 35% 0 0 -5%;
     width: 100%;
     z-index: -100;
   }
 
   .p-top-main__title {
     font-size: 5rem;
-    padding: 0 0 0 8%;
+    padding: 10% 0 0 10%;
   }
 
   .p-top-main__welcome-text {
     display: none;
   }
+  .p-top-main__course-heading {
+    font-size: 3rem;
+    text-align: center;
+    margin: 50% 0 5% 0;
+  }
+  .p-top-main__courses {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    margin: 0 3%;
+    align-items: stretch;
+  }
+  .p-course-card {
+    flex-direction: row;
+  }
+  .p-top-main__training p {
+    padding-top: 30px;
+    line-height: 4;
+    letter-spacing: 2px;
+  }
 
   .p-top-main__about {
-    margin-top: 20%;
+    margin-top: 25%;
   }
 
   .p-top-main__section-title {
@@ -722,19 +752,34 @@
 @media (max-width: 375px) {
   .p-top-main__cake {
     position: absolute;
-    padding-top: 15%;
+    padding-top: 50%;
     width: 100%;
     z-index: -100;
-    margin: 0% 10% 10% 0%;
+    margin: 0 0 0 0;
+  }
+  .p-top-main__mission-text {
+    display: none;
+  }
+
+  .p-top-main__voice-title {
+    display: none;
   }
 
   .p-top-main__title {
-    font-size: 3.8rem;
+    font-size: 2.5rem;
     padding: 35% 0 0 15%;
     justify-content: center;
   }
+  .p-top-main__training p {
+  padding-top: 30px;
+  line-height: 3;
+  letter-spacing: 1.5px;
+}
 
   .p-site-footer__instagram--sp img {
     width: 40%;
+  }
+  .p-site-footer__content {
+    margin: -10% 0 0 0;
   }
 }

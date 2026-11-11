@@ -73,7 +73,6 @@
 
 .p-top-main__welcome {
   position: absolute;
-  right: 3%;
 }
 
 .p-top-main__welcome-text {
@@ -578,8 +577,8 @@
 }
 
 .p-top-main__welcome {
-  right: 21%;
-  top: 8rem;
+  right: 10%;
+  top: 15rem;
   max-width: 360px;
 }
 
